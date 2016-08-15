@@ -22,7 +22,6 @@
     "hubot-scripts": "^2.16.1",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
-    "hubot-standup-alarm": "*",
     "hubot-tell": "*",
     "q": "*",
     "scraper": "0.0.9",
