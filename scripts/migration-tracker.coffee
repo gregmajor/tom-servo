@@ -44,7 +44,7 @@ class MigrationTracker
     return Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number
   
   # Assigns a new migration.
-  add: (user) ->
+  add: (user, name) ->
     
     # Get today's date in YYYYMMDD format...
     today = new Date
@@ -85,11 +85,11 @@ class MigrationTracker
     template += "namespace Autobahn.DataMigrations.DB_01_Migrations\n"
     template += "{\n"
     template += "    [Migration(#{yyyy}#{mm}#{dd}#{migrationNumber})]\n"
-    template += "    public class Migration_#{yyyy}#{mm}#{dd}#{migrationNumber}_NewMigration : ForwardOnlyMigration\n"
+    template += "    public class Migration_#{yyyy}#{mm}#{dd}#{migrationNumber}_#{name} : ForwardOnlyMigration\n"
     template += "    {\n"
     template += "        public override void Up()\n"
     template += "        {\n"
-    template += "            Execute.EmbeddedScript(\"Migration_#{yyyy}#{mm}#{dd}#{migrationNumber}_NewMigration.sql\");\n"
+    template += "            Execute.EmbeddedScript(\"Migration_#{yyyy}#{mm}#{dd}#{migrationNumber}_#{name}.sql\");\n"
     template += "        }\n"
     template += "    }\n"
     template += "}```"
@@ -130,8 +130,11 @@ module.exports = (robot) ->
   #robot.listeners.push new SlackBotListener(robot, /[\s\S]*/i, (msg) -> tracker.processMessage(msg, msg.message.text))
 
   # hubot assign migration
-  robot.respond /assign migration/i, (msg) ->
-    result = tracker.add(msg.message.user.name)
+  robot.respond /assign migration (.+?)$/i, (msg) ->
+    name = msg.match[1]
+    if not name
+      name = "NewMigration"
+    result = tracker.add(msg.message.user.name, name)
     msg.reply result
 
   # hubot delete all migrations
