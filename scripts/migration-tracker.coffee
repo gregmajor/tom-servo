@@ -46,6 +46,9 @@ class MigrationTracker
   # Assigns a new migration.
   add: (user, name) ->
     
+    if not name? or name is ''
+      name = "NewMigration"
+
     # Get today's date in YYYYMMDD format...
     today = new Date
     dd = today.getDate()
@@ -133,10 +136,6 @@ module.exports = (robot) ->
   robot.respond /assign migration (.+?)$/i, (msg) ->
     name = msg.match[1]
     result = tracker.add(msg.message.user.name, name)
-    msg.reply result
-
-  robot.respond /assign migration/i, (msg) ->
-    result = tracker.add(msg.message.user.name, "NewMigration")
     msg.reply result
 
   # hubot delete all migrations
