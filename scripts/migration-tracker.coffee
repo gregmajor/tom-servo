@@ -132,8 +132,8 @@ module.exports = (robot) ->
   # hubot assign migration
   robot.respond /assign migration(.+?)$/i, (msg) ->
     name = "NewMigration"
-    if msg.match[2]
-      name = msg.match[2]
+    if msg.match[1]
+      name = msg.match[1]
     result = tracker.add(msg.message.user.name, name)
     msg.reply result
 
