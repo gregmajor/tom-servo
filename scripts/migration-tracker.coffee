@@ -130,7 +130,7 @@ module.exports = (robot) ->
   #robot.listeners.push new SlackBotListener(robot, /[\s\S]*/i, (msg) -> tracker.processMessage(msg, msg.message.text))
 
   # hubot assign migration
-  robot.respond /assign migration(.*)(.+?)$/i, (msg) ->
+  robot.respond /assign migration(.+?)$/i, (msg) ->
     name = "NewMigration"
     if msg.match[2]
       name = msg.match[2]
