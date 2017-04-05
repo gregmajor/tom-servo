@@ -133,7 +133,8 @@ module.exports = (robot) ->
   robot.respond /assign migration(.+?)$/i, (msg) ->
     name = "NewMigration"
     if msg.match[1]
-      name = msg.match[1]
+      if msg.match[1] != '' || msg.match[1] != ' '
+        name = msg.match[1].replace /^\s+|\s+$/g, ""
     result = tracker.add(msg.message.user.name, name)
     msg.reply result
 
