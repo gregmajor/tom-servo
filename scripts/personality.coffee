@@ -347,294 +347,294 @@ willRespond = (room) ->
 
 module.exports = (robot) ->
 
-# Person enters
-robot.enter (msg) ->
-    msg.send msg.random enterReplies if willRespond(msg.message.room)
+  # Person enters
+  robot.enter (msg) ->
+      msg.send msg.random enterReplies if willRespond(msg.message.room)
 
-# Person leaves
-robot.leave (msg) ->
-    msg.send msg.random leaveReplies if willRespond(msg.message.room)
-
-# Good Night
-robot.hear /(good night|goodnight|bye|nighty night|nite nite)/i, (msg) ->
-    msg.send msg.random goodnightReplies if willRespond(msg.message.room)
-
-# Damn You Servo!
-robot.hear /(damn you|dammit)\b.+\bservo\b/igm, (msg) ->
-    msg.reply msg.random sorryReplies
-
-robot.respond /(damn you|dammit)/i, (msg) ->
-    msg.reply msg.random sorryReplies
-
-# Thanks Servo!
-robot.hear /(thank you|thanks)\b.+\bservo\b/igm, (msg) ->
-    msg.reply msg.random thanksReplies
-
-robot.respond /(thank you|thanks)/i, (msg) ->
-    msg.reply msg.random thanksReplies
-
-# Shut Up Servo!
-robot.hear /(shut up)\b.+\bservo\b/igm, (msg) ->
-    msg.reply msg.random shutUpReplies
-
-robot.respond /(shut up)/i, (msg) ->
-    msg.reply msg.random shutUpReplies
-
-# Cheer
-robot.hear /cheer/i, (msg) ->
-    msg.send msg.random cheerReplies if willRespond(msg.message.room)
-
-# Need Food
-robot.hear /(get|need)\b.+\bfood\b/igm, (msg) ->
-    msg.send msg.random foodReplies if willRespond(msg.message.room)
-
-# Soon
-robot.hear /\bso[o]+n\b/i, (msg) ->
-    msg.send msg.random soonImages if willRespond(msg.message.room)
-
-# Illogical
-robot.hear /.*(illogical).*/i, (msg) ->
-    msg.send msg.random illogicalReplies if willRespond(msg.message.room)
-
-# Stage is down
-robot.hear /\bstage\b.+\bdown\b/igm, (msg) ->
-    msg.send msg.random downImages if willRespond(msg.message.room)
-
-# QA is down
-robot.hear /\bqa[0-9]\b.+\bdown\b/igm, (msg) ->
-    msg.send msg.random downImages if willRespond(msg.message.room)
-
-# HTTP Status 400
-robot.hear /(return|returns|returns a|show|shows|shows a) 400\b/igm, (msg) ->
-    msg.send 'Your FACE is a BAD REQUEST! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
-
-# HTTP Status 200
-robot.hear /(return|returns|returns a|show|shows|shows a) 200\b/igm, (msg) ->
-    msg.send "Your FACE is OK! Haaaa! Ha... wait, that's not funny." if willRespond(msg.message.room)
-
-# HTTP Status 401
-robot.hear /(return|returns|returns a|show|shows|shows a) 401\b/igm, (msg) ->
-    msg.send 'Your FACE is UNAUTHORIZED! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
-
-# HTTP Status 404
-robot.hear /(return|returns|returns a|show|shows|shows a) 404\b/igm, (msg) ->
-    msg.send 'Your FACE is NOT FOUND! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
-
-# HTTP Status 500
-robot.hear /(return|returns|returns a|show|shows|shows a) 500\b/igm, (msg) ->
-    msg.send 'Your FACE is an INTERNAL SERVER ERROR! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
-
-# Deal With It
-robot.hear /deal with it/i, (msg) ->
-    msg.send msg.random dealWithItReplies if willRespond(msg.message.room)
-
-# Gopher It!
-robot.hear /(went|go(ing|es)?) for it/i, (msg) ->
-    msg.send msg.random gopherReplies if willRespond(msg.message.room)
-
-# Someone mentioned programming
-robot.respond /programming/i, (msg) ->
-    msg
-        .http("http://www.defprogramming.com/random")
-        .get() (err, res, body) ->
-            handler = new HtmlParser.DefaultHandler()
-            parser  = new HtmlParser.Parser handler
-
-            parser.parseComplete body
-
-            results = Select handler.dom, "cite a p"
-            msg.send results[0].children[0].raw
-
-# NO DISASSEMBLE!
-robot.hear /disassemble/i, (msg) ->
-    msg.send 'NO DISASSEMBLE!'
-
-# Strategy
-robot.hear /.*strategy/i, (msg) ->
-    mentions = msg.message.text.match(/(@\w+)/g)
-    robot.http('http://obliqueio.herokuapp.com')
-        .get() (err, res, body) ->
-            strategy = JSON.parse body
-            strategy = "#{mentions.join(', ')}: #{strategy}" if mentions
-            msg.send strategy
-
-# Show the messed up goat when someone mentions a merge conflict
-robot.hear /merge\s?conflict/i, (msg) ->
-    msg.reply msg.random mergeConflictReplies if willRespond(msg.message.room)
-
-# Show the Friday guy when someone mentions Friday
-robot.hear /friday/i, (msg) ->
-    msg.send msg.random fridayReplies if willRespond(msg.message.room)
-
-# Give 'em an emergency hug
-robot.hear /\b(need|needs)\b.+\bhug\b/igm, (msg) ->
-    msg.send msg.random hugReplies if willRespond(msg.message.room)
-
-# Somebody found a bug!
-robot.hear /\bfound\b.+\bbug\b/igm, (msg) ->
-    msg.send msg.random bugReplies if willRespond(msg.message.room)
-
-# Somebody tried to blame it on a race condition
-robot.hear /race\s?condition/i, (msg) ->
-    msg.send msg.random raceConditionReplies if willRespond(msg.message.room)
-
-# Somebody mentioned the grouper
-robot.hear /grouper/i, (msg) ->
-    msg.reply "http://i.imgur.com/aabaZC3.jpg" if willRespond(msg.message.room)
-
-# Get a Zen message from GitHub
-robot.hear /\bzen\b/i, (msg) ->
-    msg
-    .http("https://api.github.com/zen")
-    .get() (err, msg, body) ->
-        msg.send body if willRespond(msg.message.room)
-
-# Bad idea!
-robot.hear /bad idea/i, (msg) ->
-    msg.reply msg.random badIdeaReplies if willRespond(msg.message.room)
-
-# This coffee sucks!
-robot.hear /coffee/i, (msg) ->
-    msg.send msg.random coffeeReplies if willRespond(msg.message.room)
-
-# Have something to drink
-robot.hear /something to drink/i, (msg) ->
-    msg.reply msg.random drinkReplies if willRespond(msg.message.room)
-
-# Drunk
-robot.hear /(\W|^)(drunk|margarita|cantina|beer|whiskey|vodka|booze)(\W|$)/i, (msg) ->
-    msg.send msg.random drunkReplies if willRespond(msg.message.room)
-
-# Traffic
-robot.hear /traffic/i, (msg) ->
-    msg.reply msg.random trafficReplies if willRespond(msg.message.room)
-
-# Trouble
-robot.hear /trouble/i, (msg) ->
-    msg.send msg.random troubleReplies if willRespond(msg.message.room)
-
-# Theory
-robot.hear /theory/i, (msg) ->
-    msg.send msg.random theoryReplies if willRespond(msg.message.room)
-
-# Skydive
-robot.hear /(\W|^)(skydive|skydiving|parachute)(\W|$)/i, (msg) ->
-    msg.reply msg.random skydiveReplies if willRespond(msg.message.room)
-
-# Argument
-robot.hear /argument/i, (msg) ->
-    msg.send msg.random argumentReplies if willRespond(msg.message.room)
-
-# Chicken
-robot.hear /(\W|^)(chicken|dream)(\W|$)/i, (msg) ->
-    msg.send msg.random chickenReplies if willRespond(msg.message.room)
-
-# Acceptance Criteria
-robot.hear /(\W|^)(ac|spec|specification|criteria)(\W|$)/i, (msg) ->
-    msg.send msg.random acReplies if willRespond(msg.message.room)
-
-# Running Late
-robot.hear /\b(\W|^)(be|running)\b.+\blate\b(\W|$)/igm, (msg) ->
-    msg.send msg.random runningLateReplies if willRespond(msg.message.room)
-
-# Database
-robot.hear /(\W|^)(database|db)(\W|$)/i, (msg) ->
-    msg.send msg.random databaseReplies if willRespond(msg.message.room)
-
-# Tests Failing
-robot.hear /\b(\W|^)(test|tests)\b.+\b(failed|failing)\b(\W|$)/igm, (msg) ->
-    msg.reply msg.random testFailReplies if willRespond(msg.message.room)
-
-# Victory!
-robot.hear /victory\b/i, (msg) ->
-    msg.send msg.random victoryReplies if willRespond(msg.message.room)
-
-# Star Wars
-robot.hear /star wars/i, (msg) ->
-    msg.send msg.random starWarsReplies if willRespond(msg.message.room)
-
-# Worst Case Scenario
-robot.hear /worst.*case.*scenario/i, (msg) ->
-    msg.send msg.random worstCaseScenarioReplies if willRespond(msg.message.room)
-
-# Commit Message
-robot.respond /commit message/i, (msg) ->
-    msg.http("http://whatthecommit.com/index.txt")
-    .get() (err, res, body) ->
-    msg.reply body
-
-# Corgi Me!
-robot.respond /corgi me/i, (msg) ->
-    msg.http("http://corginator.herokuapp.com/random")
-    .get() (err, res, body) ->
-    msg.send JSON.parse(body).corgi
-
-# Corgi Bomb!
-robot.respond /corgi bomb( (\d+))?/i, (msg) ->
-    count = msg.match[2] || 5
-    msg.http("http://corginator.herokuapp.com/bomb?count=" + count)
-    .get() (err, res, body) ->
-    msg.send corgi for corgi in JSON.parse(body).corgis
-
-# Developer Excuse
-robot.respond /(?:developer excuse|excuse)(?: me)?/i, (msg) ->
-    robot.http("http://developerexcuses.com")
-    .get() (err, res, body) ->
-    matches = body.match /<a [^>]+>(.+)<\/a>/i
-
-    if matches and matches[1]
-        msg.send matches[1]
-
-# Azam!!
-robot.hear /\!\!/i, (msg) ->
-    msg.send("http://i.imgur.com/52Y31js.png") if willRespond(msg.message.room)
-
-# Unique LeaderShip Style
-robot.hear /unique leadership style\b/i, (msg) ->
-    msg.send "When you say \"unique leadership style\", I hear \"jerk\"." if willRespond(msg.message.room)
-
-# Not Invented Here
-robot.hear /not invented here\b/i, (msg) ->
-    msg.send "When you say \"not invented here\", I hear \"it would be more fun to build it\"." if willRespond(msg.message.room)
-
-# Detail Oriented
-robot.hear /detail oriented\b/i, (msg) ->
-    msg.send "When you say \"detail oriented\", I hear \"gives a shit\"." if willRespond(msg.message.room)
-
-# Trust Your Judgement
-robot.hear /trust your judgement\b/i, (msg) ->
-    msg.send "When you say \"I trust your judgement\", I hear \"I trust that you think you know better, but it will be entertaining to watch you fail\"." if willRespond(msg.message.room)
-
-# First To Admit
-robot.hear /first to admit\b/i, (msg) ->
-    msg.send "When you say \"first to admit\", I hear \"everyone has been telling me I should admit this\"." if willRespond(msg.message.room)
-
-# Build Awareness
-robot.hear /build awareness\b/i, (msg) ->
-    msg.send "When you say \"build awareness\", I hear \"listen to me more\"." if willRespond(msg.message.room)
-
-# Conventional Wisdom
-robot.hear /conventional wisdom\b/i, (msg) ->
-    msg.send "When you say \"conventional wisdom\", I hear \"path of least resistance\"." if willRespond(msg.message.room)
-
-# The Fact Is
-robot.hear /the fact is\b/i, (msg) ->
-    msg.send "When you say \"the fact is\", I hear \"this is the fact I want you to know\"." if willRespond(msg.message.room)
-
-# Technical Debt
-robot.hear /technical debt\b/i, (msg) ->
-    msg.send "When you say \"technical debt\", I hear \"we've been hacking\"." if willRespond(msg.message.room)
-
-# You Get The Idea
-robot.hear /you get the idea\b/i, (msg) ->
-    msg.send "When you say \"you get the idea\", I hear \"because I'm bored of talking about this\"." if willRespond(msg.message.room)
-
-# Which Do You Like Best?
-robot.respond /(which )?do you (like|like best|prefer)[:,\s]? (.*)$/i, (msg) ->
-    split = msg.match[3].split(" or ")
-    thing = split[(Math.random() * split.length) >> 0]
-
-    if thing[thing.length - 1] == '?'
-        thing = thing[0..thing.length - 2]
-
-    msg.send("I #{msg.match[2]} #{thing}.")
+  # Person leaves
+  robot.leave (msg) ->
+      msg.send msg.random leaveReplies if willRespond(msg.message.room)
+
+  # Good Night
+  robot.hear /(good night|goodnight|bye|nighty night|nite nite)/i, (msg) ->
+      msg.send msg.random goodnightReplies if willRespond(msg.message.room)
+
+  # Damn You Servo!
+  robot.hear /(damn you|dammit)\b.+\bservo\b/igm, (msg) ->
+      msg.reply msg.random sorryReplies
+
+  robot.respond /(damn you|dammit)/i, (msg) ->
+      msg.reply msg.random sorryReplies
+
+  # Thanks Servo!
+  robot.hear /(thank you|thanks)\b.+\bservo\b/igm, (msg) ->
+      msg.reply msg.random thanksReplies
+
+  robot.respond /(thank you|thanks)/i, (msg) ->
+      msg.reply msg.random thanksReplies
+
+  # Shut Up Servo!
+  robot.hear /(shut up)\b.+\bservo\b/igm, (msg) ->
+      msg.reply msg.random shutUpReplies
+
+  robot.respond /(shut up)/i, (msg) ->
+      msg.reply msg.random shutUpReplies
+
+  # Cheer
+  robot.hear /cheer/i, (msg) ->
+      msg.send msg.random cheerReplies if willRespond(msg.message.room)
+
+  # Need Food
+  robot.hear /(get|need)\b.+\bfood\b/igm, (msg) ->
+      msg.send msg.random foodReplies if willRespond(msg.message.room)
+
+  # Soon
+  robot.hear /\bso[o]+n\b/i, (msg) ->
+      msg.send msg.random soonImages if willRespond(msg.message.room)
+
+  # Illogical
+  robot.hear /.*(illogical).*/i, (msg) ->
+      msg.send msg.random illogicalReplies if willRespond(msg.message.room)
+
+  # Stage is down
+  robot.hear /\bstage\b.+\bdown\b/igm, (msg) ->
+      msg.send msg.random downImages if willRespond(msg.message.room)
+
+  # QA is down
+  robot.hear /\bqa[0-9]\b.+\bdown\b/igm, (msg) ->
+      msg.send msg.random downImages if willRespond(msg.message.room)
+
+  # HTTP Status 400
+  robot.hear /(return|returns|returns a|show|shows|shows a) 400\b/igm, (msg) ->
+      msg.send 'Your FACE is a BAD REQUEST! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+
+  # HTTP Status 200
+  robot.hear /(return|returns|returns a|show|shows|shows a) 200\b/igm, (msg) ->
+      msg.send "Your FACE is OK! Haaaa! Ha... wait, that's not funny." if willRespond(msg.message.room)
+
+  # HTTP Status 401
+  robot.hear /(return|returns|returns a|show|shows|shows a) 401\b/igm, (msg) ->
+      msg.send 'Your FACE is UNAUTHORIZED! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+
+  # HTTP Status 404
+  robot.hear /(return|returns|returns a|show|shows|shows a) 404\b/igm, (msg) ->
+      msg.send 'Your FACE is NOT FOUND! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+
+  # HTTP Status 500
+  robot.hear /(return|returns|returns a|show|shows|shows a) 500\b/igm, (msg) ->
+      msg.send 'Your FACE is an INTERNAL SERVER ERROR! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+
+  # Deal With It
+  robot.hear /deal with it/i, (msg) ->
+      msg.send msg.random dealWithItReplies if willRespond(msg.message.room)
+
+  # Gopher It!
+  robot.hear /(went|go(ing|es)?) for it/i, (msg) ->
+      msg.send msg.random gopherReplies if willRespond(msg.message.room)
+
+  # Someone mentioned programming
+  robot.respond /programming/i, (msg) ->
+      msg
+          .http("http://www.defprogramming.com/random")
+          .get() (err, res, body) ->
+              handler = new HtmlParser.DefaultHandler()
+              parser  = new HtmlParser.Parser handler
+
+              parser.parseComplete body
+
+              results = Select handler.dom, "cite a p"
+              msg.send results[0].children[0].raw
+
+  # NO DISASSEMBLE!
+  robot.hear /disassemble/i, (msg) ->
+      msg.send 'NO DISASSEMBLE!'
+
+  # Strategy
+  robot.hear /.*strategy/i, (msg) ->
+      mentions = msg.message.text.match(/(@\w+)/g)
+      robot.http('http://obliqueio.herokuapp.com')
+          .get() (err, res, body) ->
+              strategy = JSON.parse body
+              strategy = "#{mentions.join(', ')}: #{strategy}" if mentions
+              msg.send strategy
+
+  # Show the messed up goat when someone mentions a merge conflict
+  robot.hear /merge\s?conflict/i, (msg) ->
+      msg.reply msg.random mergeConflictReplies if willRespond(msg.message.room)
+
+  # Show the Friday guy when someone mentions Friday
+  robot.hear /friday/i, (msg) ->
+      msg.send msg.random fridayReplies if willRespond(msg.message.room)
+
+  # Give 'em an emergency hug
+  robot.hear /\b(need|needs)\b.+\bhug\b/igm, (msg) ->
+      msg.send msg.random hugReplies if willRespond(msg.message.room)
+
+  # Somebody found a bug!
+  robot.hear /\bfound\b.+\bbug\b/igm, (msg) ->
+      msg.send msg.random bugReplies if willRespond(msg.message.room)
+
+  # Somebody tried to blame it on a race condition
+  robot.hear /race\s?condition/i, (msg) ->
+      msg.send msg.random raceConditionReplies if willRespond(msg.message.room)
+
+  # Somebody mentioned the grouper
+  robot.hear /grouper/i, (msg) ->
+      msg.reply "http://i.imgur.com/aabaZC3.jpg" if willRespond(msg.message.room)
+
+  # Get a Zen message from GitHub
+  robot.hear /\bzen\b/i, (msg) ->
+      msg
+      .http("https://api.github.com/zen")
+      .get() (err, msg, body) ->
+          msg.send body if willRespond(msg.message.room)
+
+  # Bad idea!
+  robot.hear /bad idea/i, (msg) ->
+      msg.reply msg.random badIdeaReplies if willRespond(msg.message.room)
+
+  # This coffee sucks!
+  robot.hear /coffee/i, (msg) ->
+      msg.send msg.random coffeeReplies if willRespond(msg.message.room)
+
+  # Have something to drink
+  robot.hear /something to drink/i, (msg) ->
+      msg.reply msg.random drinkReplies if willRespond(msg.message.room)
+
+  # Drunk
+  robot.hear /(\W|^)(drunk|margarita|cantina|beer|whiskey|vodka|booze)(\W|$)/i, (msg) ->
+      msg.send msg.random drunkReplies if willRespond(msg.message.room)
+
+  # Traffic
+  robot.hear /traffic/i, (msg) ->
+      msg.reply msg.random trafficReplies if willRespond(msg.message.room)
+
+  # Trouble
+  robot.hear /trouble/i, (msg) ->
+      msg.send msg.random troubleReplies if willRespond(msg.message.room)
+
+  # Theory
+  robot.hear /theory/i, (msg) ->
+      msg.send msg.random theoryReplies if willRespond(msg.message.room)
+
+  # Skydive
+  robot.hear /(\W|^)(skydive|skydiving|parachute)(\W|$)/i, (msg) ->
+      msg.reply msg.random skydiveReplies if willRespond(msg.message.room)
+
+  # Argument
+  robot.hear /argument/i, (msg) ->
+      msg.send msg.random argumentReplies if willRespond(msg.message.room)
+
+  # Chicken
+  robot.hear /(\W|^)(chicken|dream)(\W|$)/i, (msg) ->
+      msg.send msg.random chickenReplies if willRespond(msg.message.room)
+
+  # Acceptance Criteria
+  robot.hear /(\W|^)(ac|spec|specification|criteria)(\W|$)/i, (msg) ->
+      msg.send msg.random acReplies if willRespond(msg.message.room)
+
+  # Running Late
+  robot.hear /\b(\W|^)(be|running)\b.+\blate\b(\W|$)/igm, (msg) ->
+      msg.send msg.random runningLateReplies if willRespond(msg.message.room)
+
+  # Database
+  robot.hear /(\W|^)(database|db)(\W|$)/i, (msg) ->
+      msg.send msg.random databaseReplies if willRespond(msg.message.room)
+
+  # Tests Failing
+  robot.hear /\b(\W|^)(test|tests)\b.+\b(failed|failing)\b(\W|$)/igm, (msg) ->
+      msg.reply msg.random testFailReplies if willRespond(msg.message.room)
+
+  # Victory!
+  robot.hear /victory\b/i, (msg) ->
+      msg.send msg.random victoryReplies if willRespond(msg.message.room)
+
+  # Star Wars
+  robot.hear /star wars/i, (msg) ->
+      msg.send msg.random starWarsReplies if willRespond(msg.message.room)
+
+  # Worst Case Scenario
+  robot.hear /worst.*case.*scenario/i, (msg) ->
+      msg.send msg.random worstCaseScenarioReplies if willRespond(msg.message.room)
+
+  # Commit Message
+  robot.respond /commit message/i, (msg) ->
+      msg.http("http://whatthecommit.com/index.txt")
+      .get() (err, res, body) ->
+      msg.reply body
+
+  # Corgi Me!
+  robot.respond /corgi me/i, (msg) ->
+      msg.http("http://corginator.herokuapp.com/random")
+      .get() (err, res, body) ->
+      msg.send JSON.parse(body).corgi
+
+  # Corgi Bomb!
+  robot.respond /corgi bomb( (\d+))?/i, (msg) ->
+      count = msg.match[2] || 5
+      msg.http("http://corginator.herokuapp.com/bomb?count=" + count)
+      .get() (err, res, body) ->
+      msg.send corgi for corgi in JSON.parse(body).corgis
+
+  # Developer Excuse
+  robot.respond /(?:developer excuse|excuse)(?: me)?/i, (msg) ->
+      robot.http("http://developerexcuses.com")
+      .get() (err, res, body) ->
+      matches = body.match /<a [^>]+>(.+)<\/a>/i
+
+      if matches and matches[1]
+          msg.send matches[1]
+
+  # Azam!!
+  robot.hear /\!\!/i, (msg) ->
+      msg.send("http://i.imgur.com/52Y31js.png") if willRespond(msg.message.room)
+
+  # Unique LeaderShip Style
+  robot.hear /unique leadership style\b/i, (msg) ->
+      msg.send "When you say \"unique leadership style\", I hear \"jerk\"." if willRespond(msg.message.room)
+
+  # Not Invented Here
+  robot.hear /not invented here\b/i, (msg) ->
+      msg.send "When you say \"not invented here\", I hear \"it would be more fun to build it\"." if willRespond(msg.message.room)
+
+  # Detail Oriented
+  robot.hear /detail oriented\b/i, (msg) ->
+      msg.send "When you say \"detail oriented\", I hear \"gives a shit\"." if willRespond(msg.message.room)
+
+  # Trust Your Judgement
+  robot.hear /trust your judgement\b/i, (msg) ->
+      msg.send "When you say \"I trust your judgement\", I hear \"I trust that you think you know better, but it will be entertaining to watch you fail\"." if willRespond(msg.message.room)
+
+  # First To Admit
+  robot.hear /first to admit\b/i, (msg) ->
+      msg.send "When you say \"first to admit\", I hear \"everyone has been telling me I should admit this\"." if willRespond(msg.message.room)
+
+  # Build Awareness
+  robot.hear /build awareness\b/i, (msg) ->
+      msg.send "When you say \"build awareness\", I hear \"listen to me more\"." if willRespond(msg.message.room)
+
+  # Conventional Wisdom
+  robot.hear /conventional wisdom\b/i, (msg) ->
+      msg.send "When you say \"conventional wisdom\", I hear \"path of least resistance\"." if willRespond(msg.message.room)
+
+  # The Fact Is
+  robot.hear /the fact is\b/i, (msg) ->
+      msg.send "When you say \"the fact is\", I hear \"this is the fact I want you to know\"." if willRespond(msg.message.room)
+
+  # Technical Debt
+  robot.hear /technical debt\b/i, (msg) ->
+      msg.send "When you say \"technical debt\", I hear \"we've been hacking\"." if willRespond(msg.message.room)
+
+  # You Get The Idea
+  robot.hear /you get the idea\b/i, (msg) ->
+      msg.send "When you say \"you get the idea\", I hear \"because I'm bored of talking about this\"." if willRespond(msg.message.room)
+
+  # Which Do You Like Best?
+  robot.respond /(which )?do you (like|like best|prefer)[:,\s]? (.*)$/i, (msg) ->
+      split = msg.match[3].split(" or ")
+      thing = split[(Math.random() * split.length) >> 0]
+
+      if thing[thing.length - 1] == '?'
+          thing = thing[0..thing.length - 2]
+
+      msg.send("I #{msg.match[2]} #{thing}.")
