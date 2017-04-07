@@ -431,6 +431,12 @@ module.exports = (robot) ->
   robot.hear /worst.*case.*scenario/i, (msg) ->
     msg.send msg.random worstCaseScenarioReplies if willRespond(msg.message.room)
 
+  # Commit Message
+  robot.respond /commit message/i, (msg) ->
+    msg.http("http://whatthecommit.com/index.txt")
+      .get() (err, res, body) ->
+        msg.reply body
+
   # Corgi Me!
   robot.respond /corgi me/i, (msg) ->
     msg.http("http://corginator.herokuapp.com/random")
