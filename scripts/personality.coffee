@@ -335,7 +335,8 @@ roomWhitelist = [
     "Shell",
     "ab_general",
     "ab_random",
-    "servotesting"
+    "servotesting",
+    "servo-test"
 ]
 
 willRespond = (room) ->
@@ -558,10 +559,11 @@ module.exports = (robot) ->
       msg.send msg.random worstCaseScenarioReplies if willRespond(msg.message.room)
 
   # Commit Message
-  robot.respond /commit message/i, (msg) ->
-      msg.http("http://whatthecommit.com/index.txt")
-      .get() (err, res, body) ->
-      msg.reply body
+  robot.hear /commit message/i, (msg) ->
+    msg
+        .http("http://whatthecommit.com/index.txt")
+        .get() (err, res, body) ->
+            msg.reply body
 
   # Corgi Me!
   robot.respond /corgi me/i, (msg) ->
@@ -590,43 +592,43 @@ module.exports = (robot) ->
       msg.send("http://i.imgur.com/52Y31js.png") if willRespond(msg.message.room)
 
   # Unique LeaderShip Style
-  robot.hear /unique leadership style\b/i, (msg) ->
+  robot.hear /unique leadership style/i, (msg) ->
       msg.send "When you say \"unique leadership style\", I hear \"jerk\"." if willRespond(msg.message.room)
 
   # Not Invented Here
-  robot.hear /not invented here\b/i, (msg) ->
+  robot.hear /not invented here/i, (msg) ->
       msg.send "When you say \"not invented here\", I hear \"it would be more fun to build it\"." if willRespond(msg.message.room)
 
   # Detail Oriented
-  robot.hear /detail oriented\b/i, (msg) ->
+  robot.hear /detail oriented/i, (msg) ->
       msg.send "When you say \"detail oriented\", I hear \"gives a shit\"." if willRespond(msg.message.room)
 
   # Trust Your Judgement
-  robot.hear /trust your judgement\b/i, (msg) ->
+  robot.hear /trust your judgement/i, (msg) ->
       msg.send "When you say \"I trust your judgement\", I hear \"I trust that you think you know better, but it will be entertaining to watch you fail\"." if willRespond(msg.message.room)
 
   # First To Admit
-  robot.hear /first to admit\b/i, (msg) ->
+  robot.hear /first to admit/i, (msg) ->
       msg.send "When you say \"first to admit\", I hear \"everyone has been telling me I should admit this\"." if willRespond(msg.message.room)
 
   # Build Awareness
-  robot.hear /build awareness\b/i, (msg) ->
+  robot.hear /build awareness/i, (msg) ->
       msg.send "When you say \"build awareness\", I hear \"listen to me more\"." if willRespond(msg.message.room)
 
   # Conventional Wisdom
-  robot.hear /conventional wisdom\b/i, (msg) ->
+  robot.hear /conventional wisdom/i, (msg) ->
       msg.send "When you say \"conventional wisdom\", I hear \"path of least resistance\"." if willRespond(msg.message.room)
 
   # The Fact Is
-  robot.hear /the fact is\b/i, (msg) ->
+  robot.hear /the fact is/i, (msg) ->
       msg.send "When you say \"the fact is\", I hear \"this is the fact I want you to know\"." if willRespond(msg.message.room)
 
   # Technical Debt
-  robot.hear /technical debt\b/i, (msg) ->
+  robot.hear /technical debt/i, (msg) ->
       msg.send "When you say \"technical debt\", I hear \"we've been hacking\"." if willRespond(msg.message.room)
 
   # You Get The Idea
-  robot.hear /you get the idea\b/i, (msg) ->
+  robot.hear /you get the idea/i, (msg) ->
       msg.send "When you say \"you get the idea\", I hear \"because I'm bored of talking about this\"." if willRespond(msg.message.room)
 
   # Which Do You Like Best?
