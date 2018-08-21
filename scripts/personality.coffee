@@ -12,6 +12,13 @@
 
 Wolfram = require('wolfram-alpha').createClient(process.env.HUBOT_WOLFRAM_APPID)
 
+roomWhitelist = [
+    "Shell",
+    "random",
+    "servo-development",
+    "team-buddhi"
+]
+
 enterReplies = [
     'Oh great... another human.',
     'Wow! It\'s getting crowded in here!',
@@ -329,14 +336,6 @@ illogicalReplies = [
     "http://i13.photobucket.com/albums/a292/macota/MCCOYGOBLET.jpg",
     "http://spike.mtvnimages.com/images/import/blog//1/8/7/5/1875583/200905/1242167094687.jpg",
     "http://randomoverload.com/wp-content/uploads/2010/12/fc5558bae4issors.jpg.jpg"
-]
-
-roomWhitelist = [
-    "Shell",
-    "ab_general",
-    "ab_random",
-    "servotesting",
-    "servo-test"
 ]
 
 willRespond = (room) ->

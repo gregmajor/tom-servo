@@ -29,23 +29,23 @@ options =
 	pirate:
 		selector: ".normalText font b"
 		uri: "http://mess.be/pirate-names-male.php"
-		greeting: 'Arrr! Yer pirate name be: '
+		greeting: 'Arrr! Yer pirate name be '
 	wutang:
 		selector: "center b font:not(.normalText)"
 		uri: "http://mess.be/inickgenwuname.php"
-		greeting: 'Your Wu-Tang Clan name is: '
+		greeting: 'Your Wu-Tang Clan name is '
 	blues:
 		selector: "center > .boldText"
 		uri: "http://mess.be/inickgenbluesmalename.php"
-		greeting: 'Welcome to the Crossroads: '
+		greeting: 'Welcome to the Crossroads, '
 	potter:
 		selector: "center .normalText font b"
 		uri: "http://mess.be/harry-potter-names-male.php"
-		greeting: 'Your Wizarding name is: '
+		greeting: 'Your Wizarding name is '
 	hacker:
 		selector: "center > p.normalText > b"
 		uri: "http://mess.be/inickgenhacker.php"
-		greeting: 'Welcome to the Matrix: '
+		greeting: 'Welcome to the Matrix, '
 
 		# curl --data "species=human&number=1" http://swg.stratics.com/content/gameplay/characters/randomname.php
 
