@@ -19,6 +19,13 @@ roomWhitelist = [
     "team-buddhi"
 ]
 
+willRespond = (room) ->
+    min = 1
+    max = 100
+    randomValue = Math.floor(Math.random() * (max - min) + min)
+    return true if randomValue >= 70# and room in roomWhitelist
+    return false
+
 enterReplies = [
     'Oh great... another human.',
     'Wow! It\'s getting crowded in here!',
@@ -337,13 +344,6 @@ illogicalReplies = [
     "http://spike.mtvnimages.com/images/import/blog//1/8/7/5/1875583/200905/1242167094687.jpg",
     "http://randomoverload.com/wp-content/uploads/2010/12/fc5558bae4issors.jpg.jpg"
 ]
-
-willRespond = (room) ->
-    min = 1
-    max = 100
-    randomValue = Math.floor(Math.random() * (max - min) + min)
-    return true if randomValue >= 70 and room in roomWhitelist
-    return false
 
 module.exports = (robot) ->
 
