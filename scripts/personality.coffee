@@ -12,20 +12,6 @@
 
 Wolfram = require('wolfram-alpha').createClient(process.env.HUBOT_WOLFRAM_APPID)
 
-roomWhitelist = [
-    "Shell",
-    "random",
-    "servo-development",
-    "team-buddhi"
-]
-
-willRespond = (room) ->
-    min = 1
-    max = 100
-    randomValue = Math.floor(Math.random() * (max - min) + min)
-    return true if randomValue >= 70# and room in roomWhitelist
-    return false
-
 enterReplies = [
     'Oh great... another human.',
     'Wow! It\'s getting crowded in here!',
@@ -346,6 +332,25 @@ illogicalReplies = [
 ]
 
 module.exports = (robot) ->
+
+  channelWhitelist = [
+      '',
+      "Shell",
+      "random",
+      "servo-development",
+      "team-buddhi"
+  ]
+
+  willRespond = (room) ->
+      min = 1
+      max = 100
+      randomValue = Math.floor(Math.random() * (max - min) + min)
+      channel = ''
+      try channel = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(room)
+      catch e then console.log(e)
+      console.log("Chan: '" + channel + "'")
+      return true if randomValue >= 70 and channel in channelWhitelist
+      return false
 
   # Person enters
   robot.enter (msg) ->
