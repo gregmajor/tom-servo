@@ -346,7 +346,7 @@ module.exports = (robot) ->
       max = 100
       randomValue = Math.floor(Math.random() * (max - min) + min)
       channel = ''
-      try channel = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(room)
+      try channel = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(room).name
       catch e then console.log(e)
       console.log("Chan: '" + channel + "'")
       return true if randomValue >= 70 and channel in channelWhitelist
