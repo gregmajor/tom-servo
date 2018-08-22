@@ -333,10 +333,13 @@ illogicalReplies = [
 
 module.exports = (robot) ->
 
+  # TODO: Make this something that servo can manage via commands (a'la servo whitelist <channel>)
   channelWhitelist = [
-      '',
+      '', # By including this, we're effectively defaulting to ALL channels whitelisted if something goes wrong
       "Shell",
       "random",
+      "africa",
+      "team-arrested-dev",
       "servo-development",
       "team-buddhi"
   ]
