@@ -365,13 +365,12 @@ module.exports = (robot) ->
   channelWhitelist = [
       '', # By including this, we're effectively defaulting to ALL channels whitelisted if something goes wrong
       "Shell",
-      "random",
-      "africa",
-      "team-arrested-dev",
-      "servo-development",
-      "team-buddhi",
+      "tool-servo",
+      "all-random-stuff",
       "it-architecture",
       "it-dev-management",
+      "team-arrested-dev",
+      "team-buddhi",
       "team-hazlo",
       "team-dev-wizards",
       "team-event-horizon",
