@@ -505,8 +505,8 @@ module.exports = (robot) ->
       msg.reply msg.random mergeConflictReplies if willRespond(msg.message.room)
 
   # Dad jokes FTW!
-  robot.hear /dad\s?joke/i, (msg) ->
-      msg.reply msg.random dadJokeReplies if willRespond(msg.message.room)
+  robot.respond /dad\s?joke/i, (msg) ->
+      msg.reply msg.random dadJokeReplies
 
   # Show the Friday guy when someone mentions Friday
   robot.hear /friday/i, (msg) ->
