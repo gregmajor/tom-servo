@@ -87,6 +87,34 @@ trafficReplies = [
     'Well, there\'s a lot of congestion on the highway, so you might want to consider an alternate route. Like, down the side of a steep mountain.'
 ]
 
+dadJokeReplies = [
+    'Did you hear about the restaurant on the moon? Great food, no atmosphere.',
+    'What do you call a fake noodle? An Impasta.',
+    'How many apples grow on a tree? All of them.',
+    'Want to hear a joke about paper? Nevermind it\'s tearable.',
+    'I just watched a program about beavers. It was the best dam program I\'ve ever seen.',
+    'Why did the coffee file a police report? It got mugged.',
+    'How does a penguin build it\'s house? Igloos it together.',
+    'Why did the scarecrow win an award? Because he was outstanding in his field.',
+    'Why don\'t skeletons ever go trick or treating? Because they have no body to go with.',
+    'What do you call an elephant that doesn\'t matter? An irrelephant.',
+    'Want to hear a joke about construction? I\'m still working on it.',
+    'What do you call cheese that isn\'t yours? Nacho Cheese.',
+    'Why couldn\'t the bicycle stand up by itself? It was two tired.',
+    'What did the grape do when he got stepped on? He let out a little wine.',
+    'I wouldn\'t buy anything with velcro. It\'s a total rip-off.',
+    'The shovel was a ground-breaking invention.',
+    'Two goldfish are in a tank. One says to the other, "Do you know how to drive this thing?"',
+    'What do you call a man with a rubber toe? Roberto.',
+    'The rotation of earth really makes my day.',
+    'What\'s brown and sticky? A stick.',
+    'I thought about going on an all-almond diet. But that\'s just nuts.',
+    'Why do you never see elephants hiding in trees? Because they\'re so good at it.',
+    'A furniture store keeps calling me. All I wanted was one night stand.',
+    'Did I tell you the time I fell in love during a backflip? I was heels over head.',
+    'I don’t play soccer because I enjoy the sport. I’m just doing it for kicks.'
+]
+
 soonImages = [
     "http://i.imgur.com/TVxNL84.png",
     "http://i.imgur.com/bFb5qZt.jpg",
@@ -341,7 +369,14 @@ module.exports = (robot) ->
       "africa",
       "team-arrested-dev",
       "servo-development",
-      "team-buddhi"
+      "team-buddhi",
+      "it-architecture",
+      "it-dev-management",
+      "team-hazlo",
+      "team-dev-wizards",
+      "team-event-horizon",
+      "team-mi4",
+      "team-opportunity"
   ]
 
   willRespond = (room) ->
@@ -469,6 +504,10 @@ module.exports = (robot) ->
   # Show the messed up goat when someone mentions a merge conflict
   robot.hear /merge\s?conflict/i, (msg) ->
       msg.reply msg.random mergeConflictReplies if willRespond(msg.message.room)
+
+  # Dad jokes FTW!
+  robot.hear /dad\s?joke/i, (msg) ->
+      msg.reply msg.random dadJokeReplies if willRespond(msg.message.room)
 
   # Show the Friday guy when someone mentions Friday
   robot.hear /friday/i, (msg) ->
