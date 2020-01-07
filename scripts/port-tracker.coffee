@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot reserve port <appName>- Reserves a range of 100 port numbers for an app 
+#   hubot reserve port for <appName>- Reserves a range of 100 port numbers for an app 
 #   hubot delete port <appName> - Deletes all the port reservations for an app
 #   hubot show ports - Shows the reserved ports
 #   hubot port help - Shows a help message for port tracking
@@ -94,12 +94,12 @@ module.exports = (robot) ->
   # Wire up to process bot messages...
   #robot.listeners.push new SlackBotListener(robot, /[\s\S]*/i, (msg) -> tracker.processMessage(msg, msg.message.text))
 
-  robot.respond /reserve ports for (.+?)$/i, (msg) ->
+  robot.respond /(assign|reserve) ports for (.+?)$/i, (msg) ->
     appName = msg.match[1]
     result = tracker.add(msg.message.user.name, appName)
     msg.reply result
 
-  robot.respond /reserve ports (\d+00?) for (.+?)$/i, (msg) ->
+  robot.respond /(assign|reserve) ports (\d+00?) for (.+?)$/i, (msg) ->
     portRange = parseInt(msg.match[1], 10);
     appName = msg.match[2];
     result = tracker.assign(msg.message.user.name, appName, portRange)
