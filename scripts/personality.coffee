@@ -10,7 +10,7 @@
 # Author:
 #   Greg Major
 
-Wolfram = require('wolfram-alpha').createClient(process.env.HUBOT_WOLFRAM_APPID)
+#Wolfram = require('wolfram-alpha').createClient(process.env.HUBOT_WOLFRAM_APPID)
 
 enterReplies = [
     'Oh great... another human.',

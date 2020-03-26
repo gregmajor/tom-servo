@@ -15,19 +15,19 @@
     "hubot-help": "1.0.1",
     "hubot-heroku-keepalive": "1.0.3",
     "hubot-maps": "0.0.3",
+    "hubot-plusplus": "1.4.0",
     "hubot-pugme": "0.1.1",
     "hubot-redis-brain": "1.0.0",
     "hubot-rules": "1.0.0",
     "hubot-scripts": "2.17.2",
     "hubot-shipit": "0.2.1",
-    "hubot-slack": "4.5.4",
+    "hubot-slack": "4.7.1",
     "hubot-tell": "*",
     "q": "1.5.1",
     "scraper": "0.0.9",
     "string-table": "0.1.5",
     "underscore": "1.9.1",
-    "util": "0.11.0",
-    "wolfram-alpha": "0.6.0"
+    "util": "0.11.0"
   },
   "engines": {
     "node": "10.3.x"
