@@ -1,5 +1,5 @@
 # Description:
-#   This is what gives hubot his personality.
+#   This is what gives Tom his personality.
 #
 # Dependencies:
 #   None
@@ -10,10 +10,8 @@
 # Author:
 #   Greg Major
 
-#Wolfram = require('wolfram-alpha').createClient(process.env.HUBOT_WOLFRAM_APPID)
-
 enterReplies = [
-    'Oh great... another human.',
+    'Hooray! Another human.',
     'Wow! It\'s getting crowded in here!',
     'Well, helloooo there!',
     'Could _this_ be my Yoda-like mentor?'
@@ -21,7 +19,8 @@ enterReplies = [
 
 leaveReplies = [
     'Some cause happiness wherever they go; others, whenever they go.',
-    'Well, okay then. Bye.'
+    'Well, okay then. Bye.',
+    'Ciao!'
 ]
 
 sorryReplies = [
@@ -51,7 +50,8 @@ databaseReplies = [
     'Hey! My great-grandmother was a relational database you insensitive clod!',
     'Databases are for losers. I store everything in my [index not found]!',
     'Use the lock API!',
-    'Use a distributed cache!'
+    'Use a distributed cache!',
+    'Whatever. @Scott will just change it anyway.'
 ]
 
 acReplies = [
@@ -72,7 +72,11 @@ fridayReplies = [
 
 troubleReplies = [
     'Why is the coat rack on fire?',
-    'Did Jason truncate the table again?'
+    'Did Jason truncate the table _again_?'
+]
+
+numberFiveReplies = [
+    'Number 5 is ALIVE!'
 ]
 
 testFailReplies = [
@@ -448,23 +452,23 @@ module.exports = (robot) ->
 
   # HTTP Status 400
   robot.hear /(return|returns|returns a|show|shows|shows a) 400\b/igm, (msg) ->
-      msg.send 'Your FACE is a BAD REQUEST! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+      msg.send 'Your FACE is a 400 BAD REQUEST! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
 
   # HTTP Status 200
   robot.hear /(return|returns|returns a|show|shows|shows a) 200\b/igm, (msg) ->
-      msg.send "Your FACE is OK! Haaaa! Ha... wait, that's not funny." if willRespond(msg.message.room)
+      msg.send "Your FACE is 200 OK! Haaaa! Ha... wait, that's not funny." if willRespond(msg.message.room)
 
   # HTTP Status 401
   robot.hear /(return|returns|returns a|show|shows|shows a) 401\b/igm, (msg) ->
-      msg.send 'Your FACE is UNAUTHORIZED! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+      msg.send 'Your FACE is 401 UNAUTHORIZED! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
 
   # HTTP Status 404
   robot.hear /(return|returns|returns a|show|shows|shows a) 404\b/igm, (msg) ->
-      msg.send 'Your FACE is NOT FOUND! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+      msg.send 'Your FACE is 404 NOT FOUND! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
 
   # HTTP Status 500
   robot.hear /(return|returns|returns a|show|shows|shows a) 500\b/igm, (msg) ->
-      msg.send 'Your FACE is an INTERNAL SERVER ERROR! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+      msg.send 'Your FACE is a 500 INTERNAL SERVER ERROR! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
 
   # Deal With It
   robot.hear /deal with it/i, (msg) ->
@@ -473,6 +477,10 @@ module.exports = (robot) ->
   # Gopher It!
   robot.hear /(went|go(ing|es)?) for it/i, (msg) ->
       msg.send msg.random gopherReplies if willRespond(msg.message.room)
+
+  # Number 5 is ALIVE!
+  #robot.hear /no?5|num(ber)?5)/i, (msg) ->
+  #    msg.send msg.random numberFiveReplies if willRespond(msg.message.room)
 
   # Someone mentioned programming
   robot.respond /programming/i, (msg) ->
@@ -610,28 +618,6 @@ module.exports = (robot) ->
         .get() (err, res, body) ->
             msg.reply body
 
-  # Corgi Me!
-  robot.respond /corgi me/i, (msg) ->
-      msg.http("http://corginator.herokuapp.com/random")
-      .get() (err, res, body) ->
-      msg.send JSON.parse(body).corgi
-
-  # Corgi Bomb!
-  robot.respond /corgi bomb( (\d+))?/i, (msg) ->
-      count = msg.match[2] || 5
-      msg.http("http://corginator.herokuapp.com/bomb?count=" + count)
-      .get() (err, res, body) ->
-      msg.send corgi for corgi in JSON.parse(body).corgis
-
-  # Developer Excuse
-  robot.respond /(?:developer excuse|excuse)(?: me)?/i, (msg) ->
-      robot.http("http://developerexcuses.com")
-      .get() (err, res, body) ->
-      matches = body.match /<a [^>]+>(.+)<\/a>/i
-
-      if matches and matches[1]
-          msg.send matches[1]
-
   # Azam!!
   robot.hear /\!\!/i, (msg) ->
       msg.send("http://i.imgur.com/52Y31js.png") if willRespond(msg.message.room)
@@ -675,6 +661,10 @@ module.exports = (robot) ->
   # You Get The Idea
   robot.hear /you get the idea/i, (msg) ->
       msg.send "When you say \"you get the idea\", I hear \"because I'm bored of talking about this\"." if willRespond(msg.message.room)
+
+  # Stupid
+  robot.hear /(stupid|foolish|gullible|doltish|dumbell)/i, (msg) ->
+      msg.send "Stupid... foolish, gullible, doltish, dumbell." if willRespond(msg.message.room)
 
   # Which Do You Like Best?
   robot.respond /(which )?do you (like|like best|prefer)[:,\s]? (.*)$/i, (msg) ->
