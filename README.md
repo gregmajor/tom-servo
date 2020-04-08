@@ -12,12 +12,6 @@ available, etc!
 [hubot]: http://hubot.github.com
 [generator-hubot]: https://github.com/github/generator-hubot
 
-<details>
-  <summary>This is a test</summary>
-  
-  Blarg!
-</details>
-
 ### Running Tom Servo Locally
 
 You can test your hubot by running the following, however some plugins will not
