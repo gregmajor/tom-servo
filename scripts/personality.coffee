@@ -75,10 +75,6 @@ troubleReplies = [
     'Did Jason truncate the table _again_?'
 ]
 
-numberFiveReplies = [
-    'Number 5 is ALIVE!'
-]
-
 testFailReplies = [
     'Hmmm... blame the newest team member?',
     'Have you tried _not_ writing tests that fail?',
@@ -176,7 +172,8 @@ cheerReplies = [
 
 foodReplies = [
     'Everyone! Soylent Green is made from chickens!',
-    'Rattlesnake. Velveeta.'
+    'Rattlesnake. Velveeta.',
+    'Like rancid pea soup.'
 ]
 
 coffeeReplies = [
@@ -197,7 +194,8 @@ raceConditionReplies = [
 ]
 
 badIdeaReplies = [
-    'Oh why don\'t you just shout down every idea I have? How about you call Bruce Springsteen and tell him to get another nickname since you\'re already the Boss! Huh? Yeah? Yeah!'
+    'Oh why don\'t you just shout down every idea I have? How about you call Bruce Springsteen and tell him to get another nickname since you\'re already the Boss! Huh? Yeah? Yeah!',
+    'Six-year olds and nuclear weapons: a combination that just can\'t be beat!'
 ]
 
 drinkReplies = [
@@ -209,7 +207,8 @@ theoryReplies = [
 ]
 
 argumentReplies = [
-    'Nothing sucks more than that moment during an argument when you realize you’re wrong.'
+    'Nothing sucks more than that moment during an argument when you realize you’re wrong.',
+    'It\'s sad that a family can be torn apart by something as simple as wild dogs.'
 ]
 
 skydiveReplies = [
@@ -233,7 +232,6 @@ victoryReplies = [
     "http://jeffatom.files.wordpress.com/2013/09/winston-churchill-says-we-deserve-victory.jpg",
     "http://i.imgur.com/lmmBt.gif",
     "http://danceswithfat.files.wordpress.com/2011/08/victory.jpg",
-    "http://stuffpoint.com/family-guy/image/56246-family-guy-victory-is-his.gif",
     "http://thelavisshow.files.wordpress.com/2012/06/victorya.jpg",
     "http://alookintomymind.files.wordpress.com/2012/05/victory.jpg",
     "http://rack.3.mshcdn.com/media/ZgkyMDEzLzA4LzA1L2QwL2JyYWRwaXR0LmJjMmQyLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/1a5a0c57/968/brad-pitt.jpg",
@@ -244,13 +242,9 @@ victoryReplies = [
     "http://rack.3.mshcdn.com/media/ZgkyMDEzLzA4LzA1L2U1L2NvbGJlcnRyZXBvLjVjNmYxLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/710824a0/764/colbert-report.jpg",
     "http://rack.1.mshcdn.com/media/ZgkyMDEzLzA4LzA1LzYyL2FuY2hvcm1hbi42NjJkYS5naWYKcAl0aHVtYgk4NTB4NTkwPgplCWpwZw/009ee80f/1c0/anchorman.jpg",
     "http://rack.3.mshcdn.com/media/ZgkyMDEzLzA4LzA1LzFmL2hhcnJ5cG90dGVyLjYxNjYzLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/db79fc85/147/harry-potter.jpg",
-    "http://www.velocityindiana.org/wp-content/uploads/2014/08/bff.gif",
-    "http://i.kinja-img.com/gawker-media/image/upload/s--_dYUH9jW--/18vvnw5taib2ogif.gif",
     "https://31.media.tumblr.com/e844e0925dbd8699ddb68fb2408d61b6/tumblr_mqrjr2oH0G1r3kc9vo1_250.gif",
-    "http://i.kinja-img.com/gawker-media/image/upload/s--0wAEcaN4--/c_fit,fl_progressive,q_80,w_636/bdbtzjrhyyuarpfbqksn.gif",
     "http://media.giphy.com/media/vpybhig8QFLOM/giphy.gif",
-    "https://media.giphy.com/media/3o85xzwOcKkOw67ywg/giphy.gif",
-    "https://ladygeekgirl.files.wordpress.com/2012/01/1352309-huzzah1_super1.jpg"
+    "https://media.giphy.com/media/3o85xzwOcKkOw67ywg/giphy.gif"
 ]
 
 starWarsReplies = [
@@ -312,9 +306,7 @@ dealWithItReplies = [
 gopherReplies = [
     'http://25.media.tumblr.com/tumblr_m6k6iluYFU1qa4vxjo1_500.jpg'
     'http://www.sixprizes.com/wp-content/uploads/gopher_caddyshack.jpg'
-    'http://i395.photobucket.com/albums/pp33/GalenSwyers/armed_gopher.jpg'
     'http://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Urocitellus_columbianus_Alberta_Martybugs.jpg/220px-Urocitellus_columbianus_Alberta_Martybugs.jpg'
-    'http://colourlovers.com.s3.amazonaws.com/blog/wp-content/uploads/2008/09/cg/Gopher-Broke.jpg'
     'http://blogs.citypages.com/gimmenoise/Gophers_Call_Me.jpg'
     'http://www.bakingdom.com/wp-content/uploads/2010/09/caddyshack-gopher.jpg'
     'http://www.quickmeme.com/img/8e/8eb558b54f0a0522520d05f4c990536b646e63b1d42d8984fbc42ff082a05ee1.jpg'
@@ -328,18 +320,14 @@ gopherReplies = [
     'http://images.pictureshunt.com/pics/g/gopher_teeth-8191.jpg'
     'http://www.tnt-audio.com/jpeg/gopher.jpg'
     'http://dailypicksandflicks.com/wp-content/uploads/2012/01/stand-back-i-got-this-gopher.jpg'
-    'http://funnyasduck.net/wp-content/uploads/2012/12/funny-fat-squirrel-gopher-groundhog-egg-atop-burger-dont-mind-if-do-pics.jpg'
-    'http://notalwaysrelated.com/wp-content/uploads/2012/11/3r7hje.jpeg'
     'http://farm3.staticflickr.com/2268/1992861119_88028372b1_o.jpg'
     'http://www.zerotocruising.com/wp-content/uploads/2013/04/groundhog.jpg'
 ]
 
 goodnightReplies = [
-    "Good night, baby.",
-    "Good night, hot stuff.",
+    "Good night",
     "Pfft! Yeah, like I'm going to let you get any sleep.",
     "Sleep tight, don't let the bed bugs bite.",
-    "May you never urinate the sweet sweet sounds of 70's disco funk.",
     "So long, and thanks for all the fish!",
     "Finally!",
     "À voir!",
@@ -356,9 +344,7 @@ illogicalReplies = [
     "http://www.katzy.dsl.pipex.com/Smileys/illogical.gif",
     "http://icanhascheezburger.files.wordpress.com/2010/08/e95f76c6-469b-486e-9d18-b2c600ff7ab6.jpg",
     "http://fc01.deviantart.net/fs46/i/2009/191/d/6/Spock_Finds_You_Illogical_by_densethemoose.jpg",
-    "http://cache.io9.com/assets/images/8/2008/11/medium_vulcan-cat-is-logical.jpg",
     "http://roflrazzi.files.wordpress.com/2011/01/funny-celebrity-pictures-karaoke.jpg",
-    "http://i13.photobucket.com/albums/a292/macota/MCCOYGOBLET.jpg",
     "http://spike.mtvnimages.com/images/import/blog//1/8/7/5/1875583/200905/1242167094687.jpg",
     "http://randomoverload.com/wp-content/uploads/2010/12/fc5558bae4issors.jpg.jpg"
 ]
@@ -390,8 +376,12 @@ module.exports = (robot) ->
       try channel = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(room).name
       catch e then console.log(e)
       console.log("Chan: '" + channel + "'")
-      return true if randomValue >= 70 and channel in channelWhitelist
-      return false
+      if randomValue >= 60 and channel in channelWhitelist
+          console.log("Will respond!")
+          return true
+      else
+          console.log("Will NOT respond!")
+          return false
 
   # Person enters
   robot.enter (msg) ->
@@ -494,10 +484,6 @@ module.exports = (robot) ->
 
               results = Select handler.dom, "cite a p"
               msg.send results[0].children[0].raw
-
-  # NO DISASSEMBLE!
-  robot.hear /disassemble/i, (msg) ->
-      msg.send 'NO DISASSEMBLE!'
 
   # Strategy
   robot.hear /.*strategy/i, (msg) ->
@@ -666,6 +652,10 @@ module.exports = (robot) ->
   robot.hear /(stupid|foolish|gullible|doltish|dumbell)/i, (msg) ->
       msg.send "Stupid... foolish, gullible, doltish, dumbell." if willRespond(msg.message.room)
 
+  # Expensive
+  robot.hear /(expensive|costly)/i, (msg) ->
+      msg.send "They must have spent tens of dollars on it!" if willRespond(msg.message.room)
+
   # Which Do You Like Best?
   robot.respond /(which )?do you (like|like best|prefer)[:,\s]? (.*)$/i, (msg) ->
       split = msg.match[3].split(" or ")
@@ -674,4 +664,3 @@ module.exports = (robot) ->
       if thing[thing.length - 1] == '?'
           thing = thing[0..thing.length - 2]
 
-      msg.send("I #{msg.match[2]} #{thing}.")
