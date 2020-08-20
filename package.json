@@ -5,10 +5,10 @@
   "author": "Greg Major <greg.b.major@gmail.com>",
   "description": "Tom Servo is a helpful(?) robot for Slack",
   "dependencies": {
-    "cheerio": "1.0.0-rc.2",
-    "cron": "1.4.0",
-    "figlet": "1.2.0",
-    "hubot": "3.1.1",
+    "cheerio": "1.0.0-rc.3",
+    "cron": "1.8.2",
+    "figlet": "1.5.0",
+    "hubot": "3.3.2",
     "hubot-diagnostics": "1.0.0",
     "hubot-google-images": "0.2.7",
     "hubot-google-translate": "0.2.1",
@@ -21,13 +21,13 @@
     "hubot-rules": "1.0.0",
     "hubot-scripts": "2.17.2",
     "hubot-shipit": "0.2.1",
-    "hubot-slack": "4.7.1",
+    "hubot-slack": "4.8.0",
     "hubot-tell": "*",
     "q": "1.5.1",
     "scraper": "0.0.9",
     "string-table": "0.1.5",
-    "underscore": "1.9.1",
-    "util": "0.11.0"
+    "underscore": "1.10.2",
+    "util": "0.12.3"
   },
   "engines": {
     "node": "10.3.x"
