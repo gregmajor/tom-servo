@@ -4,6 +4,9 @@
   "private": true,
   "author": "Greg Major <greg.b.major@gmail.com>",
   "description": "Tom Servo is a helpful(?) robot for Slack",
+  "scripts": {
+    "start": "npx hubot --name \"servo\" ."
+  },
   "dependencies": {
     "cheerio": "1.0.0-rc.3",
     "cron": "1.8.2",

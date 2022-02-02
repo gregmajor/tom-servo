@@ -20,7 +20,7 @@ upon have been set.
 
 You can start Tom Servo locally by running:
 
-    % bin/hubot
+    % npx run start
 
 You'll see some start up output and a prompt:
 
