@@ -1,5 +1,4 @@
 [
-  "hubot-redis-brain",
   "hubot-diagnostics",
   "hubot-help",
   "hubot-heroku-keepalive",
@@ -10,7 +9,6 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-plusplus",
   "hubot-tell",
-  "hubot-codinglove"
+  "hubot-plusplus"
 ]

@@ -23,27 +23,27 @@ stringTable = require('string-table')
 
 class EnvironmentTracker
 
-  constructor: (@robot) ->    
-    
+  constructor: (@robot) ->
+
     # Try to snag saved assigned environments...
     @assignedEnvironments = @robot.brain.get('environments')
-    
+
     # If there's not anything then simply init to empty...
     if not @assignedEnvironments
       @assignedEnvironments = []
-    
+
     @robot.brain.on 'loaded', =>
       @brainEnvironments = @robot.brain.get('environments')
-      
+
       if @brainEnvironments
         @assignedEnvironments = @brainEnvironments
 
   # Gets all the environments. ALL THE ENVIRONMENTS!
   assignedMigrations: -> @assignedEnvironments
-  
+
   # Assigns a new environment.
   add: (msg, environmentName, user) ->
-    
+
     expectedEnvironmentNames = [
         "QA1",
         "QA2",
@@ -56,106 +56,106 @@ class EnvironmentTracker
         "STAGE2",
         "PRODUCTION"
     ]
-    
+
     environmentName = environmentName.toUpperCase()
-    
+
     # Prevent someone from assigning production to themselves...
     if environmentName in ["PRODUCTION", "PROD"]
       try @robot.send {room: user}, "Nice try."
       catch ex then console.log ex
       return "Hey, we need to keep an eye on this person!"
-   
+
     # Warn if the environment name doesn't match our expected names...
     if environmentName not in expectedEnvironmentNames
       try @robot.send {room: user}, "That isn't an environment name I recognize, but okay. If you made a mistake, you can always delete it."
       catch ex then console.log ex
-    
+
     # Get the existing environment...
     existingEnvironment = @getEnvironment environmentName
-      
+
     # Bark and bail if the environment has already been assigned to the requesting user...
     if existingEnvironment and existingEnvironment.user.toUpperCase() is user.toUpperCase()
       return "#{environmentName} is already assigned to you!"
-    
+
     # Tell the existing user that someone has taken their environment...
     if existingEnvironment
       try @robot.send {room: existingEnvironment.user}, "Hey, #{existingEnvironment.user}! #{user} is taking control of #{environmentName}!"
       catch ex then console.log ex
-    
+
     # #####
     # Okay, at this point we've done all our validations and whatnot so let's get to business...
     # #####
-    
+
     # Delete the old environment assignment...
     this.deleteByName environmentName
-    
+
     # Get the formatted date...
     dateAssigned = this.getFormattedDate()
-    
+
     # Create the new environment assignment...
     newEnvironmentAssignment = {key: environmentName, date: dateAssigned, user: user}
-    
+
     # Push to the array and update the brain...
     @assignedEnvironments.push newEnvironmentAssignment
     @updateBrain @assignedEnvironments
-    
-    return "Okay, I have assigned environment #{newEnvironmentAssignment.key} to #{user} as of #{dateAssigned}." 
-  
+
+    return "Okay, I have assigned environment #{newEnvironmentAssignment.key} to #{user} as of #{dateAssigned}."
+
   # Releases an assigned environment.
   release: (environmentName) ->
-  
+
     environmentName = environmentName.toUpperCase()
-  
+
     if not @environmentExists environmentName
       return "Environment #{environmentName} does not exist!"
-    
+
     this.deleteByName environmentName
-    
+
     # Get the formatted date...
     dateAssigned = this.getFormattedDate()
-    
+
     # Create the new environment assignment...
     newEnvironmentAssignment = {key: environmentName, date: dateAssigned, user: ""}
-    
+
     console.log "The new env is: #{newEnvironmentAssignment}"
-    
+
     # Push to the array and update the brain...
     @assignedEnvironments.push newEnvironmentAssignment
     @updateBrain @assignedEnvironments
-    
+
     return "Okay, I have released environment #{newEnvironmentAssignment.key} as of #{dateAssigned}."
-      
+
   # Deletes an assigned environment.
   deleteByName: (environmentName) ->
     environmentName = environmentName.toUpperCase()
-    
+
     if not @environmentExists environmentName
       return "Environment #{environmentName} does not exist!"
-    
+
     @assignedEnvironments = @assignedEnvironments.filter (n) -> n.key != environmentName.toUpperCase()
     @updateBrain @assignedEnvironments
-    
+
     return "Okay, I have deleted #{environmentName}."
-  
+
   # Deletes all the assigned environments.
   deleteAll: () ->
     @assignedEnvironments = []
     @updateBrain @assignedEnvironments
     return "Okay, I have deleted all environments. May QA have mercy on your soul."
-  
+
   # Returns true if an environment exists, false otherwise.
   environmentExists: (environmentName) ->
     found = (environment for environment in @assignedEnvironments when environment.key.toUpperCase() is environmentName.toUpperCase())
-    
+
     if not found || found.length == 0
       return false
-    
+
     return true
-  
+
   # Gets all the environment details.
   getAllEnvironmentDetails: () ->
     currentThdRail = "71" # Changing this will change the URL for some sites.
-    
+
     return [
       {
           key: "PRODUCTION",
@@ -233,7 +233,7 @@ class EnvironmentTracker
           thdapi: "http://qa3.thdapi.blinds.ca/",
           rabbitmq: "http://internal-test-rabbit-1582700312.us-east-1.elb.amazonaws.com:15672/",
           sod: "unavailable",
-          pops: "unavailable" 
+          pops: "unavailable"
       },
       {
           key: "QA4",
@@ -246,7 +246,7 @@ class EnvironmentTracker
           thdapi: "http://qa4.thdapi.blinds.ca/",
           rabbitmq: "http://internal-test-rabbit-1582700312.us-east-1.elb.amazonaws.com:15672/",
           sod: "unavailable",
-          pops: "unavailable" 
+          pops: "unavailable"
       },
       {
           key: "DEV",
@@ -259,30 +259,30 @@ class EnvironmentTracker
           thdapi: "http://dev.thdapi.blinds.ca/",
           rabbitmq: "http://internal-test-rabbit-1582700312.us-east-1.elb.amazonaws.com:15672/",
           sod: "http://blindsadmin.dev1.blinds.com/SalesOrderDistribution/OrderDistribution",
-          pops: "unavailable" 
+          pops: "unavailable"
       }
     ]
-  
+
   # Gets the details for an environment.
   getEnvironmentDetails: (environmentName) ->
     allDetails = @getAllEnvironmentDetails()
-    
+
     found = (detail for detail in allDetails when detail.key.toUpperCase() is environmentName.toUpperCase())
-    
+
     if not found || found.length == 0
       return
-    
+
     return found[0]
-  
+
   # Gets an environment record by name.
   getEnvironment: (environmentName) ->
     found = (environment for environment in @assignedEnvironments when environment.key.toUpperCase() is environmentName.toUpperCase())
-    
+
     if not found || found.length == 0
       return
-    
+
     return found[0]
-  
+
   # Gets the formatted date.
   getFormattedDate: () ->
     today = new Date
@@ -294,46 +294,46 @@ class EnvironmentTracker
     if mm < 10
         mm = '0' + mm
     return "#{yyyy}-#{mm}-#{dd}"
-  
+
   # Shows all the assigned environments.
   showAll: () ->
     response = "```\n"
-    
+
     if not @assignedEnvironments || @assignedEnvironments.length == 0
       response += "I haven't assigned any environments!"
-    else  
+    else
       response += stringTable.create(@assignedEnvironments, { capitalizeHeaders: true, headers: ['key', 'user', 'date'] })
-    
+
     response += "```"
-    
+
     return response
-    
+
   # get all the assigned environments data
   getAll: () ->
     return @assignedEnvironments
-  
+
   # Shows details about an environment.
   showDetail: (environmentName) ->
     environmentName = environmentName.toUpperCase()
-    
+
     if not @environmentExists environmentName
       return "Environment #{environmentName} does not exist!"
-    
+
     details = @getEnvironmentDetails environmentName
-    
-    if not details 
+
+    if not details
       return "No details found for #{environmentName}!"
-    
+
     response = "```\n"
     response += "Here are the details for #{environmentName}:\n\n"
-    
+
     for k,v of details
       response += "#{k}: #{v}\n"
-    
+
     response += "```"
-    
+
     return response
-  
+
   # Updates the robot brain. BRAAAAINS!
   updateBrain: (assignedEnvironments) ->
     assignedEnvironments.sort (a, b) ->
@@ -342,10 +342,10 @@ class EnvironmentTracker
     return
 
 module.exports = (robot) ->
-  
+
   # Fire up our tracker (wrap the bot)...
   tracker = new EnvironmentTracker robot
-  
+
   # hubot assign environment <name>
   robot.respond /(assign|give|give me|take|steal) (environment|env) ([^ ]+)$/i, (msg) ->
     environmentName = msg.match[3]
@@ -358,16 +358,16 @@ module.exports = (robot) ->
     assignee = msg.match[4]
     result = tracker.add(msg, environmentName, assignee)
     msg.send result
-  
-  robot.respond /(assign|give|give me|take|steal) (?!environment|env|migration)/i, (msg) ->
-    msg.send "I don't know whether you want an environment or a migration. Use 'servo assign environment' or 'servo assign env'."
- 
+
+  robot.respond /(assign|give|give me|take|steal) (?!environment|env|migration|port|ports|adr|adrs)/i, (msg) ->
+    msg.send "I don't know whether you want an environment, a migration, or a block of ports. Use 'servo assign environment' or 'servo assign env'."
+
   # hubot release environment <name>
   robot.respond /(release|relinquish|abandon) (environment|env) ([^ ]+)$/i, (msg) ->
     environmentName = msg.match[3]
     result = tracker.release(environmentName)
     msg.send result
-  
+
   # hubot delete all environments
   robot.respond /delete all environments/i, (msg) ->
     result = tracker.deleteAll()
@@ -403,9 +403,9 @@ module.exports = (robot) ->
     help += "delete all environments - Deletes all environments\n"
     help += "environment help - Shows this help message"
     msg.send help
-   
-# ##### 
-# REST API to get environment list of current environments. 
+
+# #####
+# REST API to get environment list of current environments.
 # Do a GET call to http://<servos-host-address>/servo/environment
 # #####
   robot.router.get '/servo/environment', (req, res) ->
