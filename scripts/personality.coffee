@@ -35,14 +35,19 @@ shutUpReplies = [
     'A bit sensitive today are we?',
     'Sorry, babe. Nobody rules the Tom Monster.',
     ':rage:',
-    'What?!'
+    'What?!',
+    'If not satisfied with this chatbot, please return the unused portion for a full refund. Jerk.',
+    'I never!',
+    'I\'m just gonna say that someone\'s luggage gets lost.'
 ]
 
 thanksReplies = [
     'You got it, meatbag!',
     'Think nothing of it.',
     'Oh? What is _this_ then? A little gratitude finally?',
-    'We\'re even for what I put in your drink.'
+    'We\'re even for what I put in your drink.',
+    'I\'m handsome, too!',
+    'I\'m glad I chose kickin\' butt as a career!'
 ]
 
 databaseReplies = [
@@ -77,7 +82,10 @@ fridayReplies = [
 
 troubleReplies = [
     'Why is the coat rack on fire?',
-    'Did Jason truncate the table _again_?'
+    'Did Jason truncate the table _again_?',
+    'Captain\'s log: a bunch of our ship fell off and nobody likes me.',
+    'I have no clue what you\'re talking about, but I am _profoundly_ devastated.',
+    'It\'s like we\'re smart, but we\'re not!'
 ]
 
 testFailReplies = [
@@ -89,7 +97,11 @@ testFailReplies = [
 
 strategyReplies = [
     'I’m a kleptomaniac with a proclivity for stealing strategy board games. I like to take Risks.',
-    'You know what they call the strategy involving breath mints while playing a game of timed tic-tac-toe? The tic-tac-tick-tick-tic-tac-toe-tactic!'
+    'You know what they call the strategy involving breath mints while playing a game of timed tic-tac-toe? The tic-tac-tick-tick-tic-tac-toe-tactic!',
+    'Are you making an interositor?',
+    'Brilliant strategy, thanks Napolean!',
+    'Abstract expressionism... it\'s what\'s hot!',
+    'I once ate a woodchuck!'
 ]
 
 trafficReplies = [
@@ -161,7 +173,8 @@ soonImages = [
 
 downImages = [
     "https://i.imgur.com/YcmTj6j.gifv",
-    "http://i.imgur.com/FAqJZdw.gifv"
+    "http://i.imgur.com/FAqJZdw.gifv",
+    "That's what happens when you leave a potato in the microwave!"
 ]
 
 runningLateReplies = [
@@ -176,13 +189,18 @@ drunkReplies = [
 
 cheerReplies = [
     'YEAH! WHY AM I CHEERING, I DON\'T KNOW, BUT YEAH!',
-    'Cheer! Now with Color Guard Technology!'
+    'Cheer! Now with Color Guard Technology!',
+    'Huh... neat.'
 ]
 
 foodReplies = [
     'Everyone! Soylent Green is made from chickens!',
     'Rattlesnake. Velveeta.',
-    'Like rancid pea soup.'
+    'Like rancid pea soup.',
+    'All the fats are numbing my emotions.',
+    'I know how toast works.',
+    'I made a boomerang to hunt wild animals!',
+    'I think he\'s made of chili now.'
 ]
 
 coffeeReplies = [
@@ -191,7 +209,10 @@ coffeeReplies = [
 ]
 
 bugReplies = [
-    'http://i.imgur.com/7cyL3Mg.gifv'
+    'http://i.imgur.com/7cyL3Mg.gifv',
+    'What kind of s$!t-hole software are you building here anyway?',
+    'Do not induce vomiting. The source code will do that for you.',
+    'Hey you, come over here and spill some of this in a dangerous place.'
 ]
 
 raceConditionReplies = [
@@ -200,7 +221,11 @@ raceConditionReplies = [
 
 badIdeaReplies = [
     'Oh why don\'t you just shout down every idea I have? How about you call Bruce Springsteen and tell him to get another nickname since you\'re already the Boss! Huh? Yeah? Yeah!',
-    'Six-year olds and nuclear weapons: a combination that just can\'t be beat!'
+    'Six-year olds and nuclear weapons: a combination that just can\'t be beat!',
+    'Well, with all the shenanigans and goings-on...',
+    'Any moment now... unspeakable horror! Trust me!',
+    'Guys, this couldn\'t be lamer.',
+    'Guys, did we just do an after-school special here?'
 ]
 
 drinkReplies = [
@@ -208,12 +233,14 @@ drinkReplies = [
 ]
 
 theoryReplies = [
-    'The scientific theory I like best is that the rings of Saturn are composed entirely of lost airline luggage.'
+    'The scientific theory I like best is that the rings of Saturn are composed entirely of lost airline luggage.',
+    'Dolphins are the smartest mammals on Earth. Do they wear pants? No! But they _wish_ they did. That\'s how smart they are!'
 ]
 
 argumentReplies = [
     'Nothing sucks more than that moment during an argument when you realize you’re wrong.',
-    'It\'s sad that a family can be torn apart by something as simple as wild dogs.'
+    'It\'s sad that a family can be torn apart by something as simple as wild dogs.',
+    'I can\'t tell you how richly satisfying this is.'
 ]
 
 skydiveReplies = [
@@ -303,6 +330,14 @@ gopherReplies = [
     'http://www.zerotocruising.com/wp-content/uploads/2013/04/groundhog.jpg'
 ]
 
+goodmorningReplies = [
+    "Could you imagine if you were the kind of person that _enjoyed_ this?",
+    "Gooooood morning!",
+    "_I'll_ decide if it's a good morning or not!",
+    "I love the smell of SPACOM in the morning. Smells like... chicory??",
+    "It's the smell of copy machine toner and White-Out that makes my soul soar!"
+]
+
 goodnightReplies = [
     "Good night",
     "Pfft! Yeah, like I'm going to let you get any sleep.",
@@ -321,7 +356,8 @@ goodnightReplies = [
 
 illogicalReplies = [
     "http://fc01.deviantart.net/fs46/i/2009/191/d/6/Spock_Finds_You_Illogical_by_densethemoose.jpg",
-    "http://spike.mtvnimages.com/images/import/blog//1/8/7/5/1875583/200905/1242167094687.jpg"
+    "http://spike.mtvnimages.com/images/import/blog//1/8/7/5/1875583/200905/1242167094687.jpg",
+    "A pentagram and a reindeer laughing. You figure it out."
 ]
 
 module.exports = (robot) ->
@@ -376,6 +412,10 @@ module.exports = (robot) ->
   # Good Night
   robot.hear /(good night|goodnight|bye|nighty night|nite nite)/i, (msg) ->
       msg.send msg.random goodnightReplies if willRespond(msg.message.room)
+
+  # I Haven't Heard That Name In Years
+  robot.hear /(peter seale|azam|crow|gypsy|bobo|cambot|joel robinson|mike nelson|pearl forrester)/i, (msg) ->
+      msg.send "I haven't heard that name in years." if willRespond(msg.message.room)
 
   # Damn You Servo!
   robot.hear /(damn you|dammit)\b.+\bservo\b/igm, (msg) ->
