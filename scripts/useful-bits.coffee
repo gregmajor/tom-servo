@@ -27,28 +27,20 @@ module.exports = (robot) ->
   #   msg.reply "Here are the Autobahn test accounts:\nnobrainer2\\acstest1 (Customer Service Manager)\nnobrainer2\\acstest2 (Accounting Manager)\nnobrainer2\\SOTManager"
 
   # Tool Links
-  # robot.respond /\b(\W|^)(show|list|find)\b.+\b(tools|urls|links|octopus|teamcity|slack|rabbit|rabbitops)\b(\W|$)/igm, (msg) ->
-  #   links = [
-  #     {
-  #       name: "TeamCity",
-  #       url: "http://dev-deploy-1.nobrainer2.com:81/"
-  #     }
-  #     {
-  #       name: "Octopus",
-  #       url: "http://deploy.southsidesoft.com/"
-  #     }
-  #     {
-  #       name: "Slack",
-  #       url: "https://globalcustomcommerce.slack.com/"
-  #     }
-  #     {
-  #       name: "Rabbit Operations",
-  #       url: "http://rabbitops.blinds.ca:8082/"
-  #     }
-  #   ]
+  robot.respond /\b(\W|^)(show|list|find)\b.+\b(tools|urls|links|domains)\b(\W|$)/igm, (msg) ->
+    links = [
+      {
+        name: "Domain Names",
+        url: "https://gsfsgroup.atlassian.net/wiki/spaces/RL/pages/303267841/Domain+Names"
+      },
+      {
+        name: "Services List",
+        url: "https://gsfsgroup.atlassian.net/wiki/spaces/RL/pages/58589185/Services+and+Tools"
+      }
+    ]
 
-  #   response = "```\n"
-  #   response += stringTable.create(links, { capitalizeHeaders: true })
-  #   response += "```"
+    response = "```\n"
+    response += stringTable.create(links, { capitalizeHeaders: true })
+    response += "```"
 
-  #   msg.reply response
+    msg.reply response
