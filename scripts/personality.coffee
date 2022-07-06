@@ -54,6 +54,11 @@ databaseReplies = [
     'Whatever. @Scott will just change it anyway.'
 ]
 
+dockerReplies = [
+    'A DevOps engineer walks into a bar, puts the bartender in a Docker container, put Kubernetes behind the bar, spins up 1000 bartenders, orders 1 beer.',
+    'Kubernetes is just WebSphere for Millenials.'
+]
+
 acReplies = [
     'I read acceptance criteria the same way I read science fiction. I get to the end and I think, "Well, that’s not going to happen."',
     'The only thing you need to accept is that robots will inherit the Earth.',
@@ -80,6 +85,11 @@ testFailReplies = [
     'Have you tried _not_ writing tests that fail?',
     'I\'ll bet Jason truncated the table again.',
     'TDD stands for Tears Driven Development, right?'
+]
+
+strategyReplies = [
+    'I’m a kleptomaniac with a proclivity for stealing strategy board games. I like to take Risks.',
+    'You know what they call the strategy involving breath mints while playing a game of timed tic-tac-toe? The tic-tac-tick-tick-tic-tac-toe-tactic!'
 ]
 
 trafficReplies = [
@@ -151,8 +161,7 @@ soonImages = [
 
 downImages = [
     "https://i.imgur.com/YcmTj6j.gifv",
-    "http://i.imgur.com/FAqJZdw.gifv",
-    "http://i.imgur.com/RSg3ely.gifv"
+    "http://i.imgur.com/FAqJZdw.gifv"
 ]
 
 runningLateReplies = [
@@ -181,16 +190,12 @@ coffeeReplies = [
     'You know, our coffee tastes like it came out of an oil derrick. What\'d you strain it through, a mummy?'
 ]
 
-hugReplies = [
-    'http://i.imgur.com/cFId9Js.gifv'
-]
-
 bugReplies = [
     'http://i.imgur.com/7cyL3Mg.gifv'
 ]
 
 raceConditionReplies = [
-    'https://i.imgur.com/g74QhGM.jpg'
+    'Want about to a race condition hear joke?'
 ]
 
 badIdeaReplies = [
@@ -221,18 +226,9 @@ chickenReplies = [
 
 victoryReplies = [
     "http://thejointblog.com/wp-content/uploads/2013/04/victory.jpg",
-    "http://www.quickmeme.com/img/ea/ea4671998341d9fbb6f7815394b49cb2890a50ac80b62802fb021c147c068d8e.jpg",
     "http://cdn-media.hollywood.com/images/l/victory_620_080712.jpg",
-    "http://cf.chucklesnetwork.agj.co/items/5/5/9/6/0/one-does-not-simply-declare-victory-but-i-just-did.jpg",
-    "http://t.qkme.me/3qlspk.jpg",
-    "http://img.pandawhale.com/86036-victory-dance-gif-Despicable-M-EPnS.gif",
     "http://1.bp.blogspot.com/-rmJLwpPevTg/UOEBgVNiVFI/AAAAAAAAFFY/-At3Z_DzBbw/s1600/dancing+charlie+murphy+animated+gif+victory+dance.gif",
-    "http://www.gifbin.com/bin/20048442yu.gif",
-    "http://www.quickmeme.com/img/30/300ace809c3c2dca48f2f55ca39cbab24693a9bd470867d2eb4e869c645acd42.jpg",
-    "http://jeffatom.files.wordpress.com/2013/09/winston-churchill-says-we-deserve-victory.jpg",
     "http://i.imgur.com/lmmBt.gif",
-    "http://danceswithfat.files.wordpress.com/2011/08/victory.jpg",
-    "http://thelavisshow.files.wordpress.com/2012/06/victorya.jpg",
     "http://alookintomymind.files.wordpress.com/2012/05/victory.jpg",
     "http://rack.3.mshcdn.com/media/ZgkyMDEzLzA4LzA1L2QwL2JyYWRwaXR0LmJjMmQyLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/1a5a0c57/968/brad-pitt.jpg",
     "http://rack.0.mshcdn.com/media/ZgkyMDEzLzA4LzA1L2ViL2hpZ2hzY2hvb2xtLjI4YjJhLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/4755556e/b82/high-school-musical-victory.jpg",
@@ -241,24 +237,15 @@ victoryReplies = [
     "http://rack.3.mshcdn.com/media/ZgkyMDEzLzA4LzA1L2JmL2hpbXltLjU4YTEyLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/90a990f6/b38/himym.jpg",
     "http://rack.3.mshcdn.com/media/ZgkyMDEzLzA4LzA1L2U1L2NvbGJlcnRyZXBvLjVjNmYxLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/710824a0/764/colbert-report.jpg",
     "http://rack.1.mshcdn.com/media/ZgkyMDEzLzA4LzA1LzYyL2FuY2hvcm1hbi42NjJkYS5naWYKcAl0aHVtYgk4NTB4NTkwPgplCWpwZw/009ee80f/1c0/anchorman.jpg",
-    "http://rack.3.mshcdn.com/media/ZgkyMDEzLzA4LzA1LzFmL2hhcnJ5cG90dGVyLjYxNjYzLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/db79fc85/147/harry-potter.jpg",
-    "https://31.media.tumblr.com/e844e0925dbd8699ddb68fb2408d61b6/tumblr_mqrjr2oH0G1r3kc9vo1_250.gif",
-    "http://media.giphy.com/media/vpybhig8QFLOM/giphy.gif",
-    "https://media.giphy.com/media/3o85xzwOcKkOw67ywg/giphy.gif"
+    "http://rack.3.mshcdn.com/media/ZgkyMDEzLzA4LzA1LzFmL2hhcnJ5cG90dGVyLjYxNjYzLmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/db79fc85/147/harry-potter.jpg"
 ]
 
 starWarsReplies = [
     'https://i.imgur.com/el6C68M.gif',
     'https://i.imgur.com/wv2wnW2.jpg',
     'https://i.imgur.com/y3GgF9y.jpg',
-    'https://i.imgur.com/OcVirS0.jpg',
     'https://i.imgur.com/mBBoeT7.jpg',
     'https://i.imgur.com/myMj1L0.jpg',
-    'https://i.imgur.com/vk2Tast.jpg',
-    'https://i.imgur.com/0PkcZut.jpg',
-    'https://i.imgur.com/iu3Z4US.jpg',
-    'https://i.imgur.com/JxWnWEs.jpg',
-    'https://i.imgur.com/fcRE2qs.jpg',
     'https://www.youtube.com/watch?v=hEcjgJSqSRU',
     'https://www.youtube.com/watch?v=CeLrlmV9A-s',
     'https://www.youtube.com/watch?v=3zYOw7v6TFE',
@@ -266,7 +253,8 @@ starWarsReplies = [
 ]
 
 worstCaseScenarioReplies = [
-    "https://ixquick-proxy.com/do/spg/show_picture.pl?l=english&rais=1&oiu=http%3A%2F%2Fresabi.files.wordpress.com%2F2010%2F11%2Fwurst.jpg&sp=792aa5566d2e759cbf257675d47e02dc"
+    "BREAKING NEWS! Germany is advising people to stock up on sausages and cheese. This is starting to look like the Wurst Käse scenario.",
+    "Always leave the top down in a convertible, even in the rain. Worst case scenario? You get to use the car pool lane."
 ]
 
 dealWithItReplies = [
@@ -304,22 +292,13 @@ dealWithItReplies = [
 ]
 
 gopherReplies = [
-    'http://25.media.tumblr.com/tumblr_m6k6iluYFU1qa4vxjo1_500.jpg'
     'http://www.sixprizes.com/wp-content/uploads/gopher_caddyshack.jpg'
     'http://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Urocitellus_columbianus_Alberta_Martybugs.jpg/220px-Urocitellus_columbianus_Alberta_Martybugs.jpg'
-    'http://blogs.citypages.com/gimmenoise/Gophers_Call_Me.jpg'
-    'http://www.bakingdom.com/wp-content/uploads/2010/09/caddyshack-gopher.jpg'
-    'http://www.quickmeme.com/img/8e/8eb558b54f0a0522520d05f4c990536b646e63b1d42d8984fbc42ff082a05ee1.jpg'
     'http://www.youtube.com/watch?v=y8Kyi0WNg40'
-    'http://weknowmemes.com/generator/uploads/generated/g1381159009196981166.jpg'
-    'http://www.quickmeme.com/img/6f/6f8cb22cc6aff2709fc3d760b85b84f6fdbcb4aca0285bd40d8c5a7f74280f9b.jpg'
     'https://i.chzbgr.com/maxW500/1415148288/hF21C98D1/'
     'http://i.huffpost.com/gen/1365387/thumbs/n-BILL-MURRAY-CADDYSHACK-large570.jpg'
-    'http://cdn.cutestpaw.com/wp-content/uploads/2012/06/l-Gopher-greeting.jpg'
     'http://www.lawlz.org/wp-content/uploads/2012/07/gopher-tech-support-have-you-tried-chewing-on-the-cable-computer-meme.jpg'
-    'http://images.pictureshunt.com/pics/g/gopher_teeth-8191.jpg'
     'http://www.tnt-audio.com/jpeg/gopher.jpg'
-    'http://dailypicksandflicks.com/wp-content/uploads/2012/01/stand-back-i-got-this-gopher.jpg'
     'http://farm3.staticflickr.com/2268/1992861119_88028372b1_o.jpg'
     'http://www.zerotocruising.com/wp-content/uploads/2013/04/groundhog.jpg'
 ]
@@ -341,12 +320,8 @@ goodnightReplies = [
 ]
 
 illogicalReplies = [
-    "http://www.katzy.dsl.pipex.com/Smileys/illogical.gif",
-    "http://icanhascheezburger.files.wordpress.com/2010/08/e95f76c6-469b-486e-9d18-b2c600ff7ab6.jpg",
     "http://fc01.deviantart.net/fs46/i/2009/191/d/6/Spock_Finds_You_Illogical_by_densethemoose.jpg",
-    "http://roflrazzi.files.wordpress.com/2011/01/funny-celebrity-pictures-karaoke.jpg",
-    "http://spike.mtvnimages.com/images/import/blog//1/8/7/5/1875583/200905/1242167094687.jpg",
-    "http://randomoverload.com/wp-content/uploads/2010/12/fc5558bae4issors.jpg.jpg"
+    "http://spike.mtvnimages.com/images/import/blog//1/8/7/5/1875583/200905/1242167094687.jpg"
 ]
 
 module.exports = (robot) ->
@@ -355,17 +330,24 @@ module.exports = (robot) ->
   channelWhitelist = [
       '', # By including this, we're effectively defaulting to ALL channels whitelisted if something goes wrong
       "Shell",
-      "tool-servo",
+      "it-tool-servo",
       "all-random-stuff",
-      "it-architecture",
-      "it-dev-management",
-      "team-arrested-dev",
-      "team-buddhi",
-      "team-hazlo",
-      "team-dev-wizards",
-      "team-event-horizon",
-      "team-mi4",
-      "team-opportunity"
+      "all-foodies",
+      "all-gamers",
+      "all-pets",
+      "all-music-lovers",
+      "all-remote-working-topics",
+      "misc-d-and-d",
+      "it-chap-architecture",
+      "it-chap-containers",
+      "it-chap-security",
+      "it-chap-ui",
+      "it-dev-culture",
+      "it-innovation-leadership",
+      "it-squad-data-services",
+      "it-squad-opportunity",
+      "it-squad-code-slingers",
+      "it-work-current-sprint"
   ]
 
   willRespond = (room) ->
@@ -410,10 +392,10 @@ module.exports = (robot) ->
       msg.reply msg.random thanksReplies
 
   # Shut Up Servo!
-  robot.hear /(shut up)\b.+\bservo\b/igm, (msg) ->
+  robot.hear /(shut up|shut it|hush|quiet)\b.+\bservo\b/igm, (msg) ->
       msg.reply msg.random shutUpReplies
 
-  robot.respond /(shut up)/i, (msg) ->
+  robot.respond /(shut up|shut it|hush|quiet)/i, (msg) ->
       msg.reply msg.random shutUpReplies
 
   # Cheer
@@ -486,13 +468,8 @@ module.exports = (robot) ->
               msg.send results[0].children[0].raw
 
   # Strategy
-  robot.hear /.*strategy/i, (msg) ->
-      mentions = msg.message.text.match(/(@\w+)/g)
-      robot.http('http://obliqueio.herokuapp.com')
-          .get() (err, res, body) ->
-              strategy = JSON.parse body
-              strategy = "#{mentions.join(', ')}: #{strategy}" if mentions
-              msg.send strategy
+  robot.hear /(\W|^)(strategy|strategies|plan|plans)(\W|$)/i, (msg) ->
+      msg.send msg.random strategyReplies if willRespond(msg.message.room)
 
   # Show the messed up goat when someone mentions a merge conflict
   robot.hear /merge\s?conflict/i, (msg) ->
@@ -505,10 +482,6 @@ module.exports = (robot) ->
   # Show the Friday guy when someone mentions Friday
   robot.hear /friday/i, (msg) ->
       msg.send msg.random fridayReplies if willRespond(msg.message.room)
-
-  # Give 'em an emergency hug
-  robot.hear /\b(need|needs)\b.+\bhug\b/igm, (msg) ->
-      msg.send msg.random hugReplies if willRespond(msg.message.room)
 
   # Somebody found a bug!
   robot.hear /\bfound\b.+\bbug\b/igm, (msg) ->
@@ -580,6 +553,10 @@ module.exports = (robot) ->
   # Database
   robot.hear /(\W|^)(database|db)(\W|$)/i, (msg) ->
       msg.send msg.random databaseReplies if willRespond(msg.message.room)
+
+  # Docker
+  robot.hear /(\W|^)(docker|kubernetes|k8s|container)(\W|$)/i, (msg) ->
+      msg.send msg.random dockerReplies if willRespond(msg.message.room)
 
   # Tests Failing
   robot.hear /\b(\W|^)(test|tests)\b.+\b(failed|failing)\b(\W|$)/igm, (msg) ->

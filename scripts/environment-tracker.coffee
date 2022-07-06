@@ -45,22 +45,20 @@ class EnvironmentTracker
   add: (msg, environmentName, user) ->
 
     expectedEnvironmentNames = [
-        "QA1",
-        "QA2",
-        "QA3",
-        "QA4",
-        "QA5",
-        "STAGE",
-        "DEV",
-        "UAT",
-        "STAGE2",
+        "PREPROD",
+        "SCS-PRODUCTION",
+        "SCS-STAGE",
+        "SCS-QA",
+        "SCS-DEV",
+        "SCS-REDLINE",
+        "SCS-UAT",
         "PRODUCTION"
     ]
 
     environmentName = environmentName.toUpperCase()
 
     # Prevent someone from assigning production to themselves...
-    if environmentName in ["PRODUCTION", "PROD"]
+    if environmentName in ["PRODUCTION", "PROD", "SCS-PRODUCTION"]
       try @robot.send {room: user}, "Nice try."
       catch ex then console.log ex
       return "Hey, we need to keep an eye on this person!"
