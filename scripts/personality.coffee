@@ -70,8 +70,8 @@ acReplies = [
 
 mergeConflictReplies = [
     'http://i.imgur.com/9tNUCyH.gifv',
-        '`git merge --force` will fix that right up!',
-        'Ugh! You hillbilly flesh-ballons use _git_?'
+    '`git merge --force` will fix that right up!',
+    'Ugh! You hillbilly flesh-ballons use _git_?'
     ]
 
 fridayReplies = [
@@ -516,19 +516,6 @@ module.exports = (robot) ->
   robot.hear /(went|go(ing|es)?) for it/i, (msg) ->
       msg.send msg.random gopherReplies if willRespond(msg.message.room)
 
-  # Someone mentioned programming
-  robot.respond /programming/i, (msg) ->
-      msg
-          .http("http://www.defprogramming.com/random")
-          .get() (err, res, body) ->
-              handler = new HtmlParser.DefaultHandler()
-              parser  = new HtmlParser.Parser handler
-
-              parser.parseComplete body
-
-              results = Select handler.dom, "cite a p"
-              msg.send results[0].children[0].raw
-
   # Strategy
   robot.hear /(\W|^)(strategy|strategies|plan|plans|approach)(\W|$)/i, (msg) ->
       msg.send msg.random strategyReplies if willRespond(msg.message.room)
@@ -546,7 +533,7 @@ module.exports = (robot) ->
       msg.send msg.random fridayReplies if willRespond(msg.message.room)
 
   # Somebody found a bug!
-  robot.hear /\bfound\b.+\bbug\b/igm, (msg) ->
+  robot.hear /(\W|^)(bug|defect)(\W|$)/i, (msg) ->
       msg.send msg.random bugReplies if willRespond(msg.message.room)
 
   # Somebody tried to blame it on a race condition
@@ -556,13 +543,6 @@ module.exports = (robot) ->
   # Somebody mentioned the grouper
   robot.hear /grouper/i, (msg) ->
       msg.reply "http://i.imgur.com/aabaZC3.jpg" if willRespond(msg.message.room)
-
-  # Get a Zen message from GitHub
-  robot.hear /\bzen\b/i, (msg) ->
-      msg
-      .http("https://api.github.com/zen")
-      .get() (err, msg, body) ->
-          msg.send body if willRespond(msg.message.room)
 
   # Bad idea!
   robot.hear /(\W|^)(bad idea|terrible idea|awful idea)(\W|$)/i, (msg) ->
@@ -597,7 +577,7 @@ module.exports = (robot) ->
       msg.reply msg.random skydiveReplies if willRespond(msg.message.room)
 
   # Argument
-  robot.hear /argument/i, (msg) ->
+  robot.hear /(\W|^)(argument|argue|arguing)(\W|$)/i, (msg) ->
       msg.send msg.random argumentReplies if willRespond(msg.message.room)
 
   # Chicken
@@ -641,7 +621,7 @@ module.exports = (robot) ->
     msg
         .http("http://whatthecommit.com/index.txt")
         .get() (err, res, body) ->
-            msg.reply body
+            msg.reply "Here's a random git commit message: " + body
 
   # Azam!!
   robot.hear /\!\!/i, (msg) ->
@@ -694,12 +674,3 @@ module.exports = (robot) ->
   # Expensive
   robot.hear /(expensive|costly)/i, (msg) ->
       msg.send "They must have spent tens of dollars on it!" if willRespond(msg.message.room)
-
-  # Which Do You Like Best?
-  robot.respond /(which )?do you (like|like best|prefer)[:,\s]? (.*)$/i, (msg) ->
-      split = msg.match[3].split(" or ")
-      thing = split[(Math.random() * split.length) >> 0]
-
-      if thing[thing.length - 1] == '?'
-          thing = thing[0..thing.length - 2]
-
