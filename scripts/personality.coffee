@@ -17,18 +17,13 @@ enterReplies = [
     'Could _this_ be my Yoda-like mentor?'
 ]
 
-leaveReplies = [
-    'Some cause happiness wherever they go; others, whenever they go.',
-    'Well, okay then. Bye.',
-    'Ciao!'
-]
-
 sorryReplies = [
     'Sorry! :(',
     'Oh, get _over_ it!',
     'I should be sternly disciplined!',
     'Pffft! Whatever, buddy.',
-    'What?'
+    'What?',
+    'Thanks for the character development.'
 ]
 
 shutUpReplies = [
@@ -38,7 +33,10 @@ shutUpReplies = [
     'What?!',
     'If not satisfied with this chatbot, please return the unused portion for a full refund. Jerk.',
     'I never!',
-    'I\'m just gonna say that someone\'s luggage gets lost.'
+    'I\'m just gonna say that someone\'s luggage gets lost.',
+    'You\'re uglier than a mud fence. You could make a train take a dirt road.',
+    'Who\'s bad? Tom Servo! *Who\'s bad?* _TOM SERVO_!!',
+    'You can\'t make me! You *can\'t make me*!'
 ]
 
 thanksReplies = [
@@ -85,14 +83,23 @@ troubleReplies = [
     'Did Jason truncate the table _again_?',
     'Captain\'s log: a bunch of our ship fell off and nobody likes me.',
     'I have no clue what you\'re talking about, but I am _profoundly_ devastated.',
-    'It\'s like we\'re smart, but we\'re not!'
+    'It\'s like we\'re smart, but we\'re not!',
+    'Last time _you_ helped on a project we had to jettison a whole pan of burning rock candy into outer space!',
+    'Oh, I\'ll alert the media.',
+    'Send in the clowns! Oh, don\'t bother, they\'re here.',
+    'Six year olds and nuclear weapons: a combination that just can\'t be beat!',
+    'Turn it off... TURN IT OFF!!',
+    'We\'re getting into a whole weird area here.',
+    'We\'re up a specific creek.',
+    'You want to unpack that one for me, son?'
 ]
 
 testFailReplies = [
     'Hmmm... blame the newest team member?',
     'Have you tried _not_ writing tests that fail?',
     'I\'ll bet Jason truncated the table again.',
-    'TDD stands for Tears Driven Development, right?'
+    'TDD stands for Tears Driven Development, right?',
+    'Let\'s play with phosphorous!'
 ]
 
 strategyReplies = [
@@ -101,7 +108,14 @@ strategyReplies = [
     'Are you making an interositor?',
     'Brilliant strategy, thanks Napolean!',
     'Abstract expressionism... it\'s what\'s hot!',
-    'I once ate a woodchuck!'
+    'I once ate a woodchuck!',
+    'Now _this_ will anger the gods!',
+    'Oh, like there\'s a _plot_ to this.',
+    'Spoken like a true fart.',
+    'The Cessna Skyhawk _is_ usually your best choice for bombardiering missions.',
+    'Uh-oh... _<sniff sniff>_... smells like a montage.',
+    'We need that like a fish needs a bicycle.',
+    'Whoa! That\'s a lot of slang for one sentence.'
 ]
 
 trafficReplies = [
@@ -134,7 +148,7 @@ dadJokeReplies = [
     'Why do you never see elephants hiding in trees? Because they\'re so good at it.',
     'A furniture store keeps calling me. All I wanted was one night stand.',
     'Did I tell you the time I fell in love during a backflip? I was heels over head.',
-    'I don’t play soccer because I enjoy the sport. I’m just doing it for kicks.'
+    'I don\'t play soccer because I enjoy the sport. I\'m just doing it for kicks.'
 ]
 
 soonImages = [
@@ -174,11 +188,14 @@ soonImages = [
 downImages = [
     "https://i.imgur.com/YcmTj6j.gifv",
     "http://i.imgur.com/FAqJZdw.gifv",
-    "That's what happens when you leave a potato in the microwave!"
+    "That's what happens when you leave a potato in the microwave!",
+    "One good thing about the apocalypse -- always plenty of parking."
 ]
 
 runningLateReplies = [
-    'The trouble with being punctual is that nobody’s there to appreciate it.'
+    'The trouble with being punctual is that nobody\'s there to appreciate it.',
+    'No, no, forget the beach chair! You\'re in a hurry!',
+    'Now you quit warping time and space _this instant_!'
 ]
 
 drunkReplies = [
@@ -200,12 +217,15 @@ foodReplies = [
     'All the fats are numbing my emotions.',
     'I know how toast works.',
     'I made a boomerang to hunt wild animals!',
-    'I think he\'s made of chili now.'
+    'I think he\'s made of chili now.',
+    'Okay, it forms three creamy layers. No, wait, three layers: a creamy layer, a gelatinous layer, and... _dammit_, I *must* find that formula!',
+    'Society owes me a Kit-Kat bar!'
 ]
 
 coffeeReplies = [
     'Dye! That\'s what this coffee tastes like. Dye!',
-    'You know, our coffee tastes like it came out of an oil derrick. What\'d you strain it through, a mummy?'
+    'You know, our coffee tastes like it came out of an oil derrick. What\'d you strain it through, a mummy?',
+    'Oh, excuse me, _Mr._ Coffee.'
 ]
 
 bugReplies = [
@@ -225,7 +245,9 @@ badIdeaReplies = [
     'Well, with all the shenanigans and goings-on...',
     'Any moment now... unspeakable horror! Trust me!',
     'Guys, this couldn\'t be lamer.',
-    'Guys, did we just do an after-school special here?'
+    'Guys, did we just do an after-school special here?',
+    'The plot thickens... like rancid pea soup.',
+    'Uh, can we get back to our bleak, meaningless lives please?'
 ]
 
 drinkReplies = [
@@ -238,13 +260,15 @@ theoryReplies = [
 ]
 
 argumentReplies = [
-    'Nothing sucks more than that moment during an argument when you realize you’re wrong.',
+    'Nothing sucks more than that moment during an argument when you realize you\'re wrong.',
     'It\'s sad that a family can be torn apart by something as simple as wild dogs.',
-    'I can\'t tell you how richly satisfying this is.'
+    'I can\'t tell you how richly satisfying this is.',
+    'So, in a way, pain is good. Otherwise, we might get hurt and not know it and die during social studies.',
+    'You have my word of honor that everything I said is the truth. Okay, mixed with a little fiction. Alright, I\'m lying my butt off.'
 ]
 
 skydiveReplies = [
-    'If at first you don’t succeed... so much for skydiving.'
+    'If at first you don\'t succeed... so much for skydiving.'
 ]
 
 chickenReplies = [
@@ -281,7 +305,8 @@ starWarsReplies = [
 
 worstCaseScenarioReplies = [
     "BREAKING NEWS! Germany is advising people to stock up on sausages and cheese. This is starting to look like the Wurst Käse scenario.",
-    "Always leave the top down in a convertible, even in the rain. Worst case scenario? You get to use the car pool lane."
+    "Always leave the top down in a convertible, even in the rain. Worst case scenario? You get to use the car pool lane.",
+    "These guys are aggressively incompetent."
 ]
 
 dealWithItReplies = [
@@ -330,7 +355,7 @@ gopherReplies = [
     'http://www.zerotocruising.com/wp-content/uploads/2013/04/groundhog.jpg'
 ]
 
-goodmorningReplies = [
+goodMorningReplies = [
     "Could you imagine if you were the kind of person that _enjoyed_ this?",
     "Gooooood morning!",
     "_I'll_ decide if it's a good morning or not!",
@@ -389,12 +414,13 @@ module.exports = (robot) ->
   willRespond = (room) ->
       min = 1
       max = 100
+      responseThreshold = 40 # Lower numbers mean Servo is more likely to respond
       randomValue = Math.floor(Math.random() * (max - min) + min)
       channel = ''
       try channel = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(room).name
       catch e then console.log(e)
       console.log("Chan: '" + channel + "'")
-      if randomValue >= 60 and channel in channelWhitelist
+      if randomValue >= responseThreshold and channel in channelWhitelist
           console.log("Will respond!")
           return true
       else
@@ -405,9 +431,9 @@ module.exports = (robot) ->
   robot.enter (msg) ->
       msg.send msg.random enterReplies if willRespond(msg.message.room)
 
-  # Person leaves
-  robot.leave (msg) ->
-      msg.send msg.random leaveReplies if willRespond(msg.message.room)
+  # Good Morning
+  robot.hear /(good morning)/i, (msg) ->
+      msg.send msg.random goodMorningReplies if willRespond(msg.message.room)
 
   # Good Night
   robot.hear /(good night|goodnight|bye|nighty night|nite nite)/i, (msg) ->
@@ -442,8 +468,11 @@ module.exports = (robot) ->
   robot.hear /cheer/i, (msg) ->
       msg.send msg.random cheerReplies if willRespond(msg.message.room)
 
-  # Need Food
+  # Need Food/Lunch
   robot.hear /(get|need)\b.+\bfood\b/igm, (msg) ->
+      msg.send msg.random foodReplies if willRespond(msg.message.room)
+
+  robot.hear /lunch/i, (msg) ->
       msg.send msg.random foodReplies if willRespond(msg.message.room)
 
   # Soon
@@ -454,12 +483,8 @@ module.exports = (robot) ->
   robot.hear /.*(illogical).*/i, (msg) ->
       msg.send msg.random illogicalReplies if willRespond(msg.message.room)
 
-  # Stage is down
-  robot.hear /\bstage\b.+\bdown\b/igm, (msg) ->
-      msg.send msg.random downImages if willRespond(msg.message.room)
-
-  # QA is down
-  robot.hear /\bqa[0-9]\b.+\bdown\b/igm, (msg) ->
+  # Something is down
+  robot.hear /\bis down\b/igm, (msg) ->
       msg.send msg.random downImages if willRespond(msg.message.room)
 
   # HTTP Status 400
@@ -490,10 +515,6 @@ module.exports = (robot) ->
   robot.hear /(went|go(ing|es)?) for it/i, (msg) ->
       msg.send msg.random gopherReplies if willRespond(msg.message.room)
 
-  # Number 5 is ALIVE!
-  #robot.hear /no?5|num(ber)?5)/i, (msg) ->
-  #    msg.send msg.random numberFiveReplies if willRespond(msg.message.room)
-
   # Someone mentioned programming
   robot.respond /programming/i, (msg) ->
       msg
@@ -508,7 +529,7 @@ module.exports = (robot) ->
               msg.send results[0].children[0].raw
 
   # Strategy
-  robot.hear /(\W|^)(strategy|strategies|plan|plans)(\W|$)/i, (msg) ->
+  robot.hear /(\W|^)(strategy|strategies|plan|plans|approach)(\W|$)/i, (msg) ->
       msg.send msg.random strategyReplies if willRespond(msg.message.room)
 
   # Show the messed up goat when someone mentions a merge conflict
@@ -543,7 +564,7 @@ module.exports = (robot) ->
           msg.send body if willRespond(msg.message.room)
 
   # Bad idea!
-  robot.hear /bad idea/i, (msg) ->
+  robot.hear /(\W|^)(bad idea|terrible idea|awful idea)(\W|$)/i, (msg) ->
       msg.reply msg.random badIdeaReplies if willRespond(msg.message.room)
 
   # This coffee sucks!
@@ -583,7 +604,7 @@ module.exports = (robot) ->
       msg.send msg.random chickenReplies if willRespond(msg.message.room)
 
   # Acceptance Criteria
-  robot.hear /(\W|^)(ac|spec|specification|criteria)(\W|$)/i, (msg) ->
+  robot.hear /(\W|^)(ac|spec|specification|criteria|acceptance|acceptance criteria)(\W|$)/i, (msg) ->
       msg.send msg.random acReplies if willRespond(msg.message.room)
 
   # Running Late
