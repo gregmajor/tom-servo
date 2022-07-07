@@ -9,6 +9,8 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
+  "hubot-seen",
   "hubot-tell",
+  "hubot-business-cat",
   "hubot-plusplus"
 ]
