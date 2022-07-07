@@ -392,6 +392,7 @@ module.exports = (robot) ->
       '', # By including this, we're effectively defaulting to ALL channels whitelisted if something goes wrong
       "Shell",
       "it-tool-servo",
+      "it-servo-testing",
       "all-random-stuff",
       "all-foodies",
       "all-gamers",
@@ -421,10 +422,10 @@ module.exports = (robot) ->
       catch e then console.log(e)
       console.log("Chan: '" + channel + "'")
       if randomValue >= responseThreshold and channel in channelWhitelist
-          console.log("Will respond!")
+          console.log("Score: " + randomValue + " (requires " + responseThreshold + " or greater). Will respond!")
           return true
       else
-          console.log("Will NOT respond!")
+          console.log("Score: " + randomValue + " (requires " + responseThreshold + " or greater). Will NOT respond!")
           return false
 
   # Person enters
