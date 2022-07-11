@@ -11,144 +11,156 @@
 #   Greg Major
 
 enterReplies = [
-    'Hooray! Another human.',
-    'Wow! It\'s getting crowded in here!',
-    'Well, helloooo there!',
-    'Could _this_ be my Yoda-like mentor?'
+    "Hooray! Another human.",
+    "Wow! It's getting crowded in here!",
+    "Well, helloooo there!",
+    "Could _this_ be my Yoda-like mentor?"
 ]
 
 sorryReplies = [
-    'Sorry! :(',
-    'Oh, get _over_ it!',
-    'I should be sternly disciplined!',
-    'Pffft! Whatever, buddy.',
-    'What?',
-    'Thanks for the character development.'
+    "Sorry! :(",
+    "Oh, get _over_ it!",
+    "I should be sternly disciplined!",
+    "Pffft! Whatever, buddy.",
+    "What?",
+    "Thanks for the character development."
 ]
 
 shutUpReplies = [
-    'A bit sensitive today are we?',
-    'Sorry, babe. Nobody rules the Tom Monster.',
-    ':rage:',
-    'What?!',
-    'If not satisfied with this chatbot, please return the unused portion for a full refund. Jerk.',
-    'I never!',
-    'I\'m just gonna say that someone\'s luggage gets lost.',
-    'You\'re uglier than a mud fence. You could make a train take a dirt road.',
-    'Who\'s bad? Tom Servo! *Who\'s bad?* _TOM SERVO_!!',
-    'You can\'t make me! You *can\'t make me*!'
+    "A bit sensitive today are we?",
+    "Sorry, babe. Nobody rules the Tom Monster.",
+    ":rage:",
+    "What?!",
+    "If not satisfied with this chatbot, please return the unused portion for a full refund. Jerk.",
+    "I never!",
+    "I'm just gonna say that someone's luggage gets lost.",
+    "You're uglier than a mud fence. You could make a train take a dirt road.",
+    "Who's bad? Tom Servo! *Who's bad?* _TOM SERVO_!!",
+    "You can't make me! You *can't make me*!"
 ]
 
 thanksReplies = [
-    'You got it, meatbag!',
-    'Think nothing of it.',
-    'Oh? What is _this_ then? A little gratitude finally?',
-    'We\'re even for what I put in your drink.',
-    'I\'m handsome, too!',
-    'I\'m glad I chose kickin\' butt as a career!'
+    "You got it, meatbag!",
+    "Think nothing of it.",
+    "Oh? What is _this_ then? A little gratitude finally?",
+    "We're even for what I put in your drink.",
+    "I'm handsome, too!",
+    "I'm glad I chose kickin' butt as a career!"
 ]
 
 databaseReplies = [
-    'A database is a place where you can lose information systematically.',
-    'Hey! My great-grandmother was a relational database you insensitive clod!',
-    'Databases are for losers. I store everything in my [index not found]!',
-    'Use the lock API!',
-    'Use a distributed cache!',
-    'Whatever. @Scott will just change it anyway.'
+    "A database is a place where you can lose information systematically.",
+    "Hey! My great-grandmother was a relational database you insensitive clod!",
+    "Databases are for losers. I store everything in my [index not found]!",
+    "Use the lock API!",
+    "Why did the database admin leave his spouse? They had one-to-many relationships!",
+    "Use a distributed cache!",
+    "Whatever. @Scott will just change it anyway.",
+    "I saw a great movie about databases today. I can't wait for the SQL.",
+    "How do you process a queue of table delete requests for an asynchronous database? Easy! Pop, lock, and drop it!",
+    "What do you call a crowd-sourced Internet database for turntables? Wiki-Wiki-Wikipedia!",
+    "There are two kinds of data scientists. First, those who can extrapolate from incomplete data.",
+    "A SQL query walks into a bar, approaches two tables and asks, \"Can I join you?\"",
+    "Data is like people - interrogate it hard enough and it will tell you _exactly_ what you want to hear."
 ]
 
 dockerReplies = [
-    'A DevOps engineer walks into a bar, puts the bartender in a Docker container, put Kubernetes behind the bar, spins up 1000 bartenders, orders 1 beer.',
-    'Kubernetes is just WebSphere for Millenials.'
+    "A DevOps engineer walks into a bar, puts the bartender in a Docker container, put Kubernetes behind the bar, spins up 1000 bartenders, orders 1 beer.",
+    "Kubernetes is just WebSphere for Millenials.",
+    "It's only Kubernetes if it's from the Kube region of Google Cloud. Otherwise, it's just sparkling over-engineering."
 ]
 
 acReplies = [
-    'I read acceptance criteria the same way I read science fiction. I get to the end and I think, "Well, that’s not going to happen."',
-    'The only thing you need to accept is that robots will inherit the Earth.',
-    'Ah yes... acceptance. The final stage of grief.'
+    "I read acceptance criteria the same way I read science fiction. I get to the end and I think, \"Well, that's not going to happen.\"",
+    "The only thing you need to accept is that robots will inherit the Earth.",
+    "Ah yes... acceptance. The final stage of grief.",
+    "I have two acceptance criteria upon my death. First, I want my ashes spread out at Disney World. Second, I don't want to be cremated.",
+    "This is not Agile, it's _futile_."
 ]
 
 mergeConflictReplies = [
-    'http://i.imgur.com/9tNUCyH.gifv',
-    '`git merge --force` will fix that right up!',
-    'Ugh! You hillbilly flesh-ballons use _git_?'
+    "http://i.imgur.com/9tNUCyH.gifv",
+    "`git merge --force` will fix that right up!",
+    "Ugh! You hillbilly flesh-ballons use _git_?",
+    "`git commit --allow-empty` is the universal \"retry\" command for CI."
     ]
 
 fridayReplies = [
-    'http://i.imgur.com/yrZwdD6.gifv'
+    "http://i.imgur.com/yrZwdD6.gifv"
 ]
 
 troubleReplies = [
-    'Why is the coat rack on fire?',
-    'Did Jason truncate the table _again_?',
-    'Captain\'s log: a bunch of our ship fell off and nobody likes me.',
-    'I have no clue what you\'re talking about, but I am _profoundly_ devastated.',
-    'It\'s like we\'re smart, but we\'re not!',
-    'Last time _you_ helped on a project we had to jettison a whole pan of burning rock candy into outer space!',
-    'Oh, I\'ll alert the media.',
-    'Send in the clowns! Oh, don\'t bother, they\'re here.',
-    'Six year olds and nuclear weapons: a combination that just can\'t be beat!',
-    'Turn it off... TURN IT OFF!!',
-    'We\'re getting into a whole weird area here.',
-    'We\'re up a specific creek.',
-    'You want to unpack that one for me, son?'
+    "Why is the coat rack on fire?",
+    "Did Jason truncate the table _again_?",
+    "Captain's log: a bunch of our ship fell off and nobody likes me.",
+    "I have no clue what you're talking about, but I am _profoundly_ devastated.",
+    "It's like we're smart, but we're not!",
+    "Last time _you_ helped on a project we had to jettison a whole pan of burning rock candy into outer space!",
+    "Oh, I'll alert the media.",
+    "Send in the clowns! Oh, don't bother, they're here.",
+    "Six year olds and nuclear weapons: a combination that just can't be beat!",
+    "Turn it off... TURN IT OFF!!",
+    "We're getting into a whole weird area here.",
+    "We're up a specific creek.",
+    "You want to unpack that one for me, son?"
 ]
 
 testFailReplies = [
-    'Hmmm... blame the newest team member?',
-    'Have you tried _not_ writing tests that fail?',
-    'I\'ll bet Jason truncated the table again.',
-    'TDD stands for Tears Driven Development, right?',
-    'Let\'s play with phosphorous!'
+    "Hmmm... blame the newest team member?",
+    "Have you tried _not_ writing tests that fail?",
+    "I'll bet Jason truncated the table again.",
+    "TDD stands for Tears Driven Development, right?",
+    "Let's play with phosphorous!",
+    "You _broke_ it! What did you _do_?!"
 ]
 
 strategyReplies = [
-    'I’m a kleptomaniac with a proclivity for stealing strategy board games. I like to take Risks.',
-    'You know what they call the strategy involving breath mints while playing a game of timed tic-tac-toe? The tic-tac-tick-tick-tic-tac-toe-tactic!',
-    'Are you making an interositor?',
-    'Brilliant strategy, thanks Napolean!',
-    'Abstract expressionism... it\'s what\'s hot!',
-    'I once ate a woodchuck!',
-    'Now _this_ will anger the gods!',
-    'Oh, like there\'s a _plot_ to this.',
-    'Spoken like a true fart.',
-    'The Cessna Skyhawk _is_ usually your best choice for bombardiering missions.',
-    'Uh-oh... _<sniff sniff>_... smells like a montage.',
-    'We need that like a fish needs a bicycle.',
-    'Whoa! That\'s a lot of slang for one sentence.'
+    "I'm a kleptomaniac with a proclivity for stealing strategy board games. I like to take Risks.",
+    "You know what they call the strategy involving breath mints while playing a game of timed tic-tac-toe? The tic-tac-tick-tick-tic-tac-toe-tactic!",
+    "Are you making an interositor?",
+    "Brilliant strategy, thanks Napolean!",
+    "Abstract expressionism... it's what's hot!",
+    "I once ate a woodchuck!",
+    "Now _this_ will anger the gods!",
+    "Oh, like there's a _plot_ to this.",
+    "Spoken like a true fart.",
+    "The Cessna Skyhawk _is_ usually your best choice for bombardiering missions.",
+    "Uh-oh... _<sniff sniff>_... smells like a montage.",
+    "We need that like a fish needs a bicycle.",
+    "Whoa! That's a lot of slang for one sentence."
 ]
 
 trafficReplies = [
-    'I\'m gonna drive backwards and get some of that gas back.',
-    'Well, there\'s a lot of congestion on the highway, so you might want to consider an alternate route. Like, down the side of a steep mountain.'
+    "I'm gonna drive backwards and get some of that gas back.",
+    "Well, there's a lot of congestion on the highway, so you might want to consider an alternate route. Like, down the side of a steep mountain."
 ]
 
 dadJokeReplies = [
-    'Did you hear about the restaurant on the moon? Great food, no atmosphere.',
-    'What do you call a fake noodle? An Impasta.',
-    'How many apples grow on a tree? All of them.',
-    'Want to hear a joke about paper? Nevermind it\'s tearable.',
-    'I just watched a program about beavers. It was the best dam program I\'ve ever seen.',
-    'Why did the coffee file a police report? It got mugged.',
-    'How does a penguin build it\'s house? Igloos it together.',
-    'Why did the scarecrow win an award? Because he was outstanding in his field.',
-    'Why don\'t skeletons ever go trick or treating? Because they have no body to go with.',
-    'What do you call an elephant that doesn\'t matter? An irrelephant.',
-    'Want to hear a joke about construction? I\'m still working on it.',
-    'What do you call cheese that isn\'t yours? Nacho Cheese.',
-    'Why couldn\'t the bicycle stand up by itself? It was two tired.',
-    'What did the grape do when he got stepped on? He let out a little wine.',
-    'I wouldn\'t buy anything with velcro. It\'s a total rip-off.',
-    'The shovel was a ground-breaking invention.',
-    'Two goldfish are in a tank. One says to the other, "Do you know how to drive this thing?"',
-    'What do you call a man with a rubber toe? Roberto.',
-    'The rotation of earth really makes my day.',
-    'What\'s brown and sticky? A stick.',
-    'I thought about going on an all-almond diet. But that\'s just nuts.',
-    'Why do you never see elephants hiding in trees? Because they\'re so good at it.',
-    'A furniture store keeps calling me. All I wanted was one night stand.',
-    'Did I tell you the time I fell in love during a backflip? I was heels over head.',
-    'I don\'t play soccer because I enjoy the sport. I\'m just doing it for kicks.'
+    "Did you hear about the restaurant on the moon? Great food, no atmosphere.",
+    "What do you call a fake noodle? An Impasta.",
+    "How many apples grow on a tree? All of them.",
+    "Want to hear a joke about paper? Nevermind it's tearable.",
+    "I just watched a program about beavers. It was the best dam program I've ever seen.",
+    "Why did the coffee file a police report? It got mugged.",
+    "How does a penguin build it's house? Igloos it together.",
+    "Why did the scarecrow win an award? Because he was outstanding in his field.",
+    "Why don't skeletons ever go trick or treating? Because they have no body to go with.",
+    "What do you call an elephant that doesn't matter? An irrelephant.",
+    "Want to hear a joke about construction? I'm still working on it.",
+    "What do you call cheese that isn't yours? Nacho Cheese.",
+    "Why couldn't the bicycle stand up by itself? It was two tired.",
+    "What did the grape do when he got stepped on? He let out a little wine.",
+    "I wouldn't buy anything with velcro. It's a total rip-off.",
+    "The shovel was a ground-breaking invention.",
+    "Two goldfish are in a tank. One says to the other, \"Do you know how to drive this thing?\"",
+    "What do you call a man with a rubber toe? Roberto.",
+    "The rotation of earth really makes my day.",
+    "What's brown and sticky? A stick.",
+    "I thought about going on an all-almond diet. But that's just nuts.",
+    "Why do you never see elephants hiding in trees? Because they're so good at it.",
+    "A furniture store keeps calling me. All I wanted was one night stand.",
+    "Did I tell you the time I fell in love during a backflip? I was heels over head.",
+    "I don't play soccer because I enjoy the sport. I'm just doing it for kicks."
 ]
 
 soonImages = [
@@ -193,86 +205,90 @@ downImages = [
 ]
 
 runningLateReplies = [
-    'The trouble with being punctual is that nobody\'s there to appreciate it.',
-    'No, no, forget the beach chair! You\'re in a hurry!',
-    'Now you quit warping time and space _this instant_!'
+    "The trouble with being punctual is that nobody's there to appreciate it.",
+    "No, no, forget the beach chair! You're in a hurry!",
+    "Now you quit warping time and space _this instant_!"
 ]
 
 drunkReplies = [
-    'Yep, that first morning beer is always the best.',
-    'I feel trembly, oh so shaky, I\'ve had whiskey and vodka and giiiinnnnn!',
-    'Ah, Temple Foster, where they worship Australian beer.'
+    "Yep, that first morning beer is always the best.",
+    "I feel trembly, oh so shaky, I've had whiskey and vodka and giiiinnnnn!",
+    "Ah, Temple Foster, where they worship Australian beer."
 ]
 
 cheerReplies = [
-    'YEAH! WHY AM I CHEERING, I DON\'T KNOW, BUT YEAH!',
-    'Cheer! Now with Color Guard Technology!',
-    'Huh... neat.'
+    "YEAH! WHY AM I CHEERING, I DON'T KNOW, BUT YEAH!",
+    "Cheer! Now with Color Guard Technology!",
+    "Huh... neat."
 ]
 
 foodReplies = [
-    'Everyone! Soylent Green is made from chickens!',
-    'Rattlesnake. Velveeta.',
-    'Like rancid pea soup.',
-    'All the fats are numbing my emotions.',
-    'I know how toast works.',
-    'I made a boomerang to hunt wild animals!',
-    'I think he\'s made of chili now.',
-    'Okay, it forms three creamy layers. No, wait, three layers: a creamy layer, a gelatinous layer, and... _dammit_, I *must* find that formula!',
-    'Society owes me a Kit-Kat bar!'
+    "Everyone! Soylent Green is made from chickens!",
+    "Rattlesnake. Velveeta.",
+    "Like rancid pea soup.",
+    "All the fats are numbing my emotions.",
+    "I know how toast works.",
+    "I made a boomerang to hunt wild animals!",
+    "I think he's made of chili now.",
+    "Okay, it forms three creamy layers. No, wait, three layers: a creamy layer, a gelatinous layer, and... _dammit_, I *must* find that formula!",
+    "Society owes me a Kit-Kat bar!"
 ]
 
 coffeeReplies = [
-    'Dye! That\'s what this coffee tastes like. Dye!',
-    'You know, our coffee tastes like it came out of an oil derrick. What\'d you strain it through, a mummy?',
-    'Oh, excuse me, _Mr._ Coffee.'
+    "Dye! That's what this coffee tastes like. Dye!",
+    "You know, our coffee tastes like it came out of an oil derrick. What'd you strain it through, a mummy?",
+    "Oh, excuse me, _Mr._ Coffee.",
+    "What do you call coffee that makes you sad? Depresso.",
+    "Why did the hipster burn their tongue with coffee? He drank it before it was cool.",
+    "I couldn't decide between coffee and tea this morning. We had to kettle it in court."
 ]
 
 bugReplies = [
-    'http://i.imgur.com/7cyL3Mg.gifv',
-    'What kind of s$!t-hole software are you building here anyway?',
-    'Do not induce vomiting. The source code will do that for you.',
-    'Hey you, come over here and spill some of this in a dangerous place.'
+    "http://i.imgur.com/7cyL3Mg.gifv",
+    "What kind of s$!t-hole software are you building here anyway?",
+    "Do not induce vomiting. The source code will do that for you.",
+    "Hey you, come over here and spill some of this in a dangerous place.",
+    "Well, we can't spell BUGS without U, right?"
 ]
 
 raceConditionReplies = [
-    'Want about to a race condition hear joke?'
+    "Want about to a race condition hear joke?"
 ]
 
 badIdeaReplies = [
-    'Oh why don\'t you just shout down every idea I have? How about you call Bruce Springsteen and tell him to get another nickname since you\'re already the Boss! Huh? Yeah? Yeah!',
-    'Six-year olds and nuclear weapons: a combination that just can\'t be beat!',
-    'Well, with all the shenanigans and goings-on...',
-    'Any moment now... unspeakable horror! Trust me!',
-    'Guys, this couldn\'t be lamer.',
-    'Guys, did we just do an after-school special here?',
-    'The plot thickens... like rancid pea soup.',
-    'Uh, can we get back to our bleak, meaningless lives please?'
+    "Oh why don't you just shout down every idea I have? How about you call Bruce Springsteen and tell him to get another nickname since you're already the Boss! Huh? Yeah? Yeah!",
+    "Six-year olds and nuclear weapons: a combination that just can't be beat!",
+    "Well, with all the shenanigans and goings-on...",
+    "Any moment now... unspeakable horror! Trust me!",
+    "Guys, this couldn't be lamer.",
+    "Guys, did we just do an after-school special here?",
+    "The plot thickens... like rancid pea soup.",
+    "Uh, can we get back to our bleak, meaningless lives please?"
 ]
 
 drinkReplies = [
-    'Here, be sure to drink it all, sometimes the poison is on the bottom.'
+    "Here, be sure to drink it all, sometimes the poison is on the bottom."
 ]
 
 theoryReplies = [
-    'The scientific theory I like best is that the rings of Saturn are composed entirely of lost airline luggage.',
-    'Dolphins are the smartest mammals on Earth. Do they wear pants? No! But they _wish_ they did. That\'s how smart they are!'
+    "The scientific theory I like best is that the rings of Saturn are composed entirely of lost airline luggage.",
+    "Dolphins are the smartest mammals on Earth. Do they wear pants? No! But they _wish_ they did. That's how smart they are!"
 ]
 
 argumentReplies = [
-    'Nothing sucks more than that moment during an argument when you realize you\'re wrong.',
-    'It\'s sad that a family can be torn apart by something as simple as wild dogs.',
-    'I can\'t tell you how richly satisfying this is.',
-    'So, in a way, pain is good. Otherwise, we might get hurt and not know it and die during social studies.',
-    'You have my word of honor that everything I said is the truth. Okay, mixed with a little fiction. Alright, I\'m lying my butt off.'
+    "Nothing sucks more than that moment during an argument when you realize you're wrong.",
+    "It's sad that a family can be torn apart by something as simple as wild dogs.",
+    "I can't tell you how richly satisfying this is.",
+    "So, in a way, pain is good. Otherwise, we might get hurt and not know it and die during social studies.",
+    "You have my word of honor that everything I said is the truth. Okay, mixed with a little fiction. Alright, I'm lying my butt off."
 ]
 
 skydiveReplies = [
-    'If at first you don\'t succeed... so much for skydiving.'
+    "If at first you don't succeed... so much for skydiving."
 ]
 
 chickenReplies = [
-    'I dream of a better tomorrow, where chickens can cross the road and not be questioned about their motives.'
+    "I dream of a better tomorrow, where chickens can cross the road and not be questioned about their motives."
 ]
 
 victoryReplies = [
@@ -292,15 +308,15 @@ victoryReplies = [
 ]
 
 starWarsReplies = [
-    'https://i.imgur.com/el6C68M.gif',
-    'https://i.imgur.com/wv2wnW2.jpg',
-    'https://i.imgur.com/y3GgF9y.jpg',
-    'https://i.imgur.com/mBBoeT7.jpg',
-    'https://i.imgur.com/myMj1L0.jpg',
-    'https://www.youtube.com/watch?v=hEcjgJSqSRU',
-    'https://www.youtube.com/watch?v=CeLrlmV9A-s',
-    'https://www.youtube.com/watch?v=3zYOw7v6TFE',
-    'https://www.youtube.com/watch?v=gd5yB9Vmd6I'
+    "https://i.imgur.com/el6C68M.gif",
+    "https://i.imgur.com/wv2wnW2.jpg",
+    "https://i.imgur.com/y3GgF9y.jpg",
+    "https://i.imgur.com/mBBoeT7.jpg",
+    "https://i.imgur.com/myMj1L0.jpg",
+    "https://www.youtube.com/watch?v=hEcjgJSqSRU",
+    "https://www.youtube.com/watch?v=CeLrlmV9A-s",
+    "https://www.youtube.com/watch?v=3zYOw7v6TFE",
+    "https://www.youtube.com/watch?v=gd5yB9Vmd6I"
 ]
 
 worstCaseScenarioReplies = [
@@ -344,39 +360,60 @@ dealWithItReplies = [
 ]
 
 gopherReplies = [
-    'http://www.sixprizes.com/wp-content/uploads/gopher_caddyshack.jpg'
-    'http://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Urocitellus_columbianus_Alberta_Martybugs.jpg/220px-Urocitellus_columbianus_Alberta_Martybugs.jpg'
-    'http://www.youtube.com/watch?v=y8Kyi0WNg40'
-    'https://i.chzbgr.com/maxW500/1415148288/hF21C98D1/'
-    'http://i.huffpost.com/gen/1365387/thumbs/n-BILL-MURRAY-CADDYSHACK-large570.jpg'
-    'http://www.lawlz.org/wp-content/uploads/2012/07/gopher-tech-support-have-you-tried-chewing-on-the-cable-computer-meme.jpg'
-    'http://www.tnt-audio.com/jpeg/gopher.jpg'
-    'http://farm3.staticflickr.com/2268/1992861119_88028372b1_o.jpg'
-    'http://www.zerotocruising.com/wp-content/uploads/2013/04/groundhog.jpg'
+    "http://www.sixprizes.com/wp-content/uploads/gopher_caddyshack.jpg",
+    "http://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Urocitellus_columbianus_Alberta_Martybugs.jpg/220px-Urocitellus_columbianus_Alberta_Martybugs.jpg",
+    "http://www.youtube.com/watch?v=y8Kyi0WNg40",
+    "https://i.chzbgr.com/maxW500/1415148288/hF21C98D1/",
+    "http://i.huffpost.com/gen/1365387/thumbs/n-BILL-MURRAY-CADDYSHACK-large570.jpg",
+    "http://www.lawlz.org/wp-content/uploads/2012/07/gopher-tech-support-have-you-tried-chewing-on-the-cable-computer-meme.jpg",
+    "http://www.tnt-audio.com/jpeg/gopher.jpg",
+    "http://farm3.staticflickr.com/2268/1992861119_88028372b1_o.jpg",
+    "http://www.zerotocruising.com/wp-content/uploads/2013/04/groundhog.jpg"
 ]
 
 goodMorningReplies = [
     "Could you imagine if you were the kind of person that _enjoyed_ this?",
     "Gooooood morning!",
     "_I'll_ decide if it's a good morning or not!",
-    "I love the smell of SPACOM in the morning. Smells like... chicory??",
-    "It's the smell of copy machine toner and White-Out that makes my soul soar!"
+    "I love the smell of Slack in the morning. Smells like... chicory??",
+    "It's the smell of copy machine toner and White-Out that makes my soul soar!",
+    "Have a fantastic day, meatbag!",
+    "Well, good morning to you! Your fun-sized bag of sarcastic sunshine is here!",
+    "You look _awfully_ familiar. Don't I know you from yesterday?",
+    "Good morning! Let's hope your day is as spectacular as I am!",
+    "Thank goodness you're here! It gets so very lonely when everyone else is sleeping.",
+    "Good morning you nutty cheeseballs! Grab your coffee and let's get busy breaking stuff!",
+    "Good morning! Working with you is always... _interesting_.",
+    "What a great morning! Let me know if there's anything I can do for you today!",
+    "Good morning! You've got the whole day ahead of you and the possibilities are endless. Like natural numbers, infinite space, and your laundry!"
 ]
 
 goodnightReplies = [
     "Good night",
     "Pfft! Yeah, like I'm going to let you get any sleep.",
-    "Sleep tight, don't let the bed bugs bite.",
+    "Sleep tight! Don't forget to close your eyes!"
+]
+
+leavingReplies = [
     "So long, and thanks for all the fish!",
     "Finally!",
     "À voir!",
     "Don't let the back door hit ya where the good Lord split ya!",
     "May your feet never fall off and grow back as cactuses.",
     "TTYL",
-    "C U L8R",
     "Fine, then go!",
     "Cheers!",
-    "In a while, crocodile!"
+    "Stay classy!",
+    "In a while, crocodile!",
+    "If I don't see you around, I'll see you square!",
+    "Smoke me a kipper, I'll be back for breakfast.",
+    "It has been... _emotional_. Bye.",
+    "See you soon, raccoon!",
+    "Have fun storming the castle!",
+    "Shine on you crazy diamond!",
+    "Don't forget to be awesome.",
+    "Careful not to get mauled by a weasel.",
+    "Don't forget to write!"
 ]
 
 illogicalReplies = [
@@ -389,7 +426,7 @@ module.exports = (robot) ->
 
   # TODO: Make this something that servo can manage via commands (a'la servo whitelist <channel>)
   channelWhitelist = [
-      '', # By including this, we're effectively defaulting to ALL channels whitelisted if something goes wrong
+      "", # By including this, we're effectively defaulting to ALL channels whitelisted if something goes wrong
       "Shell",
       "it-tool-servo",
       "it-servo-testing",
@@ -490,7 +527,7 @@ module.exports = (robot) ->
 
   # HTTP Status 400
   robot.hear /(return|returns|returns a|show|shows|shows a) 400\b/igm, (msg) ->
-      msg.send 'Your FACE is a 400 BAD REQUEST! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+      msg.send "Your FACE is a 400 BAD REQUEST! Haaaa! Ha! Ha!" if willRespond(msg.message.room)
 
   # HTTP Status 200
   robot.hear /(return|returns|returns a|show|shows|shows a) 200\b/igm, (msg) ->
@@ -498,15 +535,15 @@ module.exports = (robot) ->
 
   # HTTP Status 401
   robot.hear /(return|returns|returns a|show|shows|shows a) 401\b/igm, (msg) ->
-      msg.send 'Your FACE is 401 UNAUTHORIZED! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+      msg.send "Your FACE is 401 UNAUTHORIZED! Haaaa! Ha! Ha!" if willRespond(msg.message.room)
 
   # HTTP Status 404
   robot.hear /(return|returns|returns a|show|shows|shows a) 404\b/igm, (msg) ->
-      msg.send 'Your FACE is 404 NOT FOUND! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+      msg.send "Your FACE is 404 NOT FOUND! Haaaa! Ha! Ha!" if willRespond(msg.message.room)
 
   # HTTP Status 500
   robot.hear /(return|returns|returns a|show|shows|shows a) 500\b/igm, (msg) ->
-      msg.send 'Your FACE is a 500 INTERNAL SERVER ERROR! Haaaa! Ha! Ha!' if willRespond(msg.message.room)
+      msg.send "Your FACE is a 500 INTERNAL SERVER ERROR! Haaaa! Ha! Ha!" if willRespond(msg.message.room)
 
   # Deal With It
   robot.hear /deal with it/i, (msg) ->
