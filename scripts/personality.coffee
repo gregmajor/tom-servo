@@ -444,15 +444,13 @@ module.exports = (robot) ->
       "it-dev-culture",
       "it-innovation-leadership",
       "it-squad-data-services",
-      "it-squad-opportunity",
-      "it-squad-code-slingers",
       "it-work-current-sprint"
   ]
 
   willRespond = (room) ->
       min = 1
       max = 100
-      responseThreshold = 60 # Lower numbers mean Servo is more likely to respond
+      responseThreshold = 80 # Lower numbers mean Servo is more likely to respond
       randomValue = Math.floor(Math.random() * (max - min) + min)
       channel = ''
       try channel = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(room).name
